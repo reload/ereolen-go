@@ -6,8 +6,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function buildRedirectParam(pathname: string, search: string): string {
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/ereolen" : "";
   const fullPath = pathname + search;
-  return `/?from=${encodeURIComponent(fullPath)}`;
+  return `${basePath}/?from=${encodeURIComponent(fullPath)}`;
 }
 
 export function buildRedirectUrl(
