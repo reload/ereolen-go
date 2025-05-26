@@ -1,10 +1,10 @@
-import { ComboboxSelect } from "@/components/combobox-select";
+import { LibrarySelect } from "@/components/library-select";
 import HtmlContent from "@/components/HtmlContent";
 
 export default function Home() {
   return (
     <>
-      <ComboboxSelect />
+      <LibrarySelect />
       <HtmlContent src="/content/main.html" />
     </>
   );
