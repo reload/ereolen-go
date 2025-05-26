@@ -1,9 +1,18 @@
-import HtmlContent from "@/components/HtmlContent";
+"use client";
+import { buildRedirectParam } from "@/lib/utils";
+import { useEffect } from "react";
 
-export default function Home() {
-  return (
-    <main>
-      <HtmlContent src="/content/main.html" />
-    </main>
-  );
+export default function CatchAll() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const redirectTo = buildRedirectParam(
+      window.location.pathname,
+      window.location.search
+    );
+
+    window.location.replace(redirectTo);
+  }, []);
+
+  return null;
 }
