@@ -2,59 +2,87 @@ import { helpANdSupportLink } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
+import { Typography as Typo } from "@/components/typography";
+
+import { twMerge } from "tailwind-merge";
+import { Link } from "@/components/link";
+
+type CardWrapperProps = {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+};
+
+const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
+  const base =
+    "flex items-center rounded-xl p-6 shadow-lg text-white justify-center";
+  const classes = twMerge(base, className);
+
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
+  return <div className={classes}>{children}</div>;
+};
 
 const SupportDownloadCards = () => {
   return (
-    <section className="grid gap-6 p-6 md:grid-cols-2">
+    <section className="mt-auto grid w-full gap-6 md:grid-cols-2">
       {/* Help and Support */}
-      <a
+      <CardWrapper
         href={helpANdSupportLink}
-        className="flex items-center justify-center rounded-xl bg-[#C0163A] p-6 text-white shadow-lg"
+        className="bg-primary hover:no-underline"
       >
         <div className="flex items-center gap-4">
-          <div className="flex h-[100px] w-[100px] items-center justify-center rounded-full border-4 border-white text-6xl font-bold">
+          <div className="flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-white text-6xl font-bold">
             ?
           </div>
           <div className="font-semibold">
-            <p>Hjælp og</p>
-            <p>support</p>
+            <Typo as="p" variant="h4">
+              Hjælp og support
+            </Typo>
           </div>
         </div>
-      </a>
+      </CardWrapper>
 
       {/* Download App */}
-      <div className="flex items-center justify-center gap-4 rounded-xl bg-[#7B848E] p-6 text-white shadow-lg">
+      <CardWrapper className="bg-[#7B848E]">
         <Image
           src={addBasePath("/ereolen_app.png")}
           alt="eReolen Icon"
           className="rounded-xl"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
         />
-        <div className="flex h-full flex-col justify-between">
+        <div className="ml-4 flex h-full flex-col justify-between">
           <div className="font-semibold">
-            <p>Download</p>
-            <p>eReolens app</p>
+            <Typo as="p" variant="h4">
+              Download eReolens app
+            </Typo>
           </div>
 
-          <div className="flex gap-4">
-            <a
+          <div className="mt-2 flex gap-4">
+            <Link
               href="https://play.google.com/store/apps/details?id=dk.redia.eReolen"
               target="_blank"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={addBasePath("/google_play.svg")} alt="Google Play" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://apps.apple.com/dk/app/ereolen/id1438218229?l=da"
               target="_blank"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={addBasePath("/app_store.svg")} alt="App Store" />
-            </a>
+            </Link>
           </div>
         </div>
-      </div>
+      </CardWrapper>
     </section>
   );
 };

@@ -51,10 +51,16 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+
+  /* --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0); */
+  --primary: oklch(0.466 0.248 14.76);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  /* --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0); */
+  --secondary: oklch(0.956 0.008 254.14);
   --secondary-foreground: oklch(0.205 0 0);
+
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -77,7 +83,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --select-width: 550px;
+  --select-width: 42rem;
 }
 
 .dark {
@@ -126,6 +132,9 @@
 @layer utilities {
   .w-select {
     width: var(--select-width);
+  }
+  .max-w-select {
+    max-width: var(--select-width);
   }
   .popoverContent {
     width: var(--radix-popover-trigger-width);

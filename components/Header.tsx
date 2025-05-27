@@ -4,16 +4,16 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="">
-      <div className="mx-auto max-w-6xl p-4">
+    <header className="border-t-primary bg-scondary border-t-40 p-4 pt-8">
+      <div className="mx-auto w-full max-w-6xl">
         <Image
           src={addBasePath("/logo.svg")}
           alt="Logo"
-          width={200}
+          width={225}
           height={100}
+          className="h-auto w-full max-w-[225px]"
         />
       </div>
-      <div className="h-10 bg-[#b81b40]"></div>
     </header>
   );
 };
