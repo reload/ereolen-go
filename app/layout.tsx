@@ -21,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="da">
       <body
-        className={`${sourceSansProLight.className} flex min-h-screen flex-col bg-[#f0f0f0] antialiased`}
+        className={`${sourceSansProLight.className} flex min-h-screen flex-col antialiased`}
       >
         <Header />
-        <main className="mx-auto w-full max-w-6xl flex-1 space-y-8 p-4 pt-12">
-          {children}
+        <main className="bg-secondary flex flex-1 px-4">
+          <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 md:py-12">
+            {children}
+          </div>
         </main>
         <Footer />
       </body>

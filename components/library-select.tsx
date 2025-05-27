@@ -34,17 +34,17 @@ export function LibrarySelect() {
   const [input, setInput] = useState("");
   const [storedValue, setStoredValue] = useLocalStorage<string>(
     "selectedLibrary",
-    ""
+    "",
   );
 
   const selectedLibrary = libraries.find((lib) => lib.value === storedValue);
 
   const filteredLibraries = libraries.filter((lib) =>
-    lib.label.toLowerCase().includes(input.toLowerCase())
+    lib.label.toLowerCase().includes(input.toLowerCase()),
   );
 
   const sortedLibraries = filteredLibraries.sort((a, b) =>
-    a.label.localeCompare(b.label)
+    a.label.localeCompare(b.label),
   );
 
   const handleSelectValue = (lib: Library) => {
@@ -66,27 +66,32 @@ export function LibrarySelect() {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverAnchor asChild>
-        <div className="grid grid-cols-[1fr_min-content] gap-2 max-w-select ">
+        <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
           <PopoverTrigger asChild>
             <Button
               variant="outline"
               role="combobox"
-              className="w-full justify-between"
+              className="w-full justify-between text-lg"
               aria-expanded={open}
+              size={"xl"}
             >
               {selectedLibrary ? selectedLibrary.label : "Vælg dit bibliotek"}
               <ChevronsUpDown className="ml-2 opacity-50" />
             </Button>
           </PopoverTrigger>
-          <Button className="w-min min-w-20 ml-auto" onClick={handleSubmit}>
+          <Button
+            className="ml-auto text-2xl font-bold"
+            size={"xl"}
+            onClick={handleSubmit}
+          >
             Go
           </Button>
         </div>
       </PopoverAnchor>
       <PopoverContent
-        className="popoverContent p-0 mt-2"
+        className="popoverContent mt-2 p-0"
         align="start"
-        side="top"
+        side="bottom"
       >
         <Command className="w-full">
           <CommandInput
@@ -104,17 +109,17 @@ export function LibrarySelect() {
                   value={lib.label}
                   onSelect={() => handleSelectValue(lib)}
                   className={cn(
-                    "gap-3 justify-between flex items-center",
+                    "flex items-center justify-between gap-3",
                     storedValue === lib.value
-                      ? "border-accent border-solid border-2 bg-accent/20"
-                      : ""
+                      ? "border-secondary bg-accent/20 border-2 border-solid"
+                      : "",
                   )}
                 >
                   {lib.label}
                   <Check
                     className={cn(
                       "ml-auto",
-                      storedValue === lib.value ? "opacity-100 " : "opacity-0"
+                      storedValue === lib.value ? "opacity-100" : "opacity-0",
                     )}
                   />
                 </CommandItem>
