@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sourceSansProLight = localFont({
+  src: "../fonts/source-sans-pro.light.ttf",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="da">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-[#f0f0f0] antialiased`}
+        className={`${sourceSansProLight.className} flex min-h-screen flex-col bg-[#f0f0f0] antialiased`}
       >
         <Header />
         <main className="mx-auto w-full max-w-6xl flex-1 space-y-8 p-4 pt-12">
