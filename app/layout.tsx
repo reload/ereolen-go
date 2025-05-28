@@ -26,7 +26,7 @@ export default function RootLayout({
         <Script
           key="ti-loader"
           id="ti-loader"
-          src={addBasePath("/lib/tiLoader.min.js")}
+          src={addBasePath("/tiLoader.min.js")}
           strategy="afterInteractive"
         />
       </head>
