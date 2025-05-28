@@ -1,7 +1,7 @@
 export const libraries = [
   {
     value: "aabenraa",
-    label: "Aabenraa Biblioteker og Kulturhuse",
+    label: "Aabenraa Bibliotekerne",
     domain: "www.aabenraabib.dk",
     secondaryDomains: ["aabenraabib.dk"],
   },
@@ -13,13 +13,13 @@ export const libraries = [
   },
   {
     value: "aarhus",
-    label: "Aarhus Kommunes Biblioteker",
+    label: "Aarhus Bibliotekerne",
     domain: "www.aakb.dk",
     secondaryDomains: ["aakb.dk"],
   },
   {
     value: "aero",
-    label: "Ærø Folkebibliotek",
+    label: "Ærø Bibliotek",
     domain: "www.arrebib.dk",
     secondaryDomains: ["arrebib.dk"],
   },
@@ -31,13 +31,13 @@ export const libraries = [
   },
   {
     value: "allerod",
-    label: "Allerød Biblioteker",
+    label: "Allerød Bibliotekerne",
     domain: "www.bibliotek.alleroed.dk",
     secondaryDomains: ["bibliotek.alleroed.dk"],
   },
   {
     value: "assens",
-    label: "AssensBibliotekerne",
+    label: "Assens Bibliotekerne",
     domain: "www.assensbib.dk",
     secondaryDomains: ["assensbib.dk"],
   },
@@ -49,7 +49,7 @@ export const libraries = [
   },
   {
     value: "billund",
-    label: "Billund Bibliotekerne og Borgerservice",
+    label: "Billund Bibliotekerne",
     domain: "billundbib.dk",
     secondaryDomains: [
       "www.billundbib.dk",
@@ -59,13 +59,13 @@ export const libraries = [
   },
   {
     value: "bornholm",
-    label: "Bornholms Folkebiblioteker",
+    label: "Bornholms Bibliotekerne",
     domain: "bibliotek.brk.dk",
     secondaryDomains: [],
   },
   {
     value: "brondby",
-    label: "Brøndby-Bibliotekerne",
+    label: "Brøndby Bibliotekerne",
     domain: "www.brondby-bibliotekerne.dk",
     secondaryDomains: ["brondby-bibliotekerne.dk"],
   },
@@ -89,7 +89,7 @@ export const libraries = [
   },
   {
     value: "esbjerg",
-    label: "Esbjerg Kommunes Biblioteker",
+    label: "Esbjerg Bibliotekerne",
     domain: "www.esbjergbibliotek.dk",
     secondaryDomains: [
       "esbjergbibliotek.dk",
@@ -117,7 +117,7 @@ export const libraries = [
   },
   {
     value: "faxe",
-    label: "Faxe Kommunes Bibliotek & Borgerservice",
+    label: "Faxe Bibliotek",
     domain: "www.faxebibliotek.dk",
     secondaryDomains: ["faxebibliotek.dk"],
   },
@@ -141,7 +141,7 @@ export const libraries = [
   },
   {
     value: "frederikshavn",
-    label: "Frederikshavn Kommunes Biblioteker",
+    label: "Frederikshavn Bibliotekerne",
     domain: "bibl.frederikshavn.dk",
     secondaryDomains: [],
   },
@@ -153,7 +153,7 @@ export const libraries = [
   },
   {
     value: "fureso",
-    label: "Furesø Bibliotek & Borgerservice",
+    label: "Furesø Bibliotek",
     domain: "furbib.dk",
     secondaryDomains: ["www.furbib.dk"],
   },
@@ -183,13 +183,13 @@ export const libraries = [
   },
   {
     value: "gribskov",
-    label: "Gribskov Biblioteker",
+    label: "Gribskov Bibliotekerne",
     domain: "www.gribskovbib.dk",
     secondaryDomains: ["gribskovbib.dk"],
   },
   {
     value: "guldborgsund",
-    label: "Guldborgsund-bibliotekerne",
+    label: "Guldborgsund bibliotekerne",
     domain: "guldbib.dk",
     secondaryDomains: ["www.guldbib.dk"],
   },
@@ -213,7 +213,7 @@ export const libraries = [
   },
   {
     value: "helsingor",
-    label: "Helsingør Kommunes Biblioteker",
+    label: "Helsingør Bibliotekerne",
     domain: "helsbib.dk",
     secondaryDomains: ["www.helsbib.dk"],
   },
@@ -243,7 +243,7 @@ export const libraries = [
   },
   {
     value: "hoje-taastrup",
-    label: "Høje-Taastrup Kommunes Biblioteker",
+    label: "Høje-Taastrup Bibliotekerne",
     domain: "bibliotek.htk.dk",
     secondaryDomains: ["www.bibliotek.htk.dk"],
   },
@@ -273,7 +273,7 @@ export const libraries = [
   },
   {
     value: "hvidovre",
-    label: "HvidovreBibliotekerne",
+    label: "Hvidovre Bibliotekerne",
     domain: "www.hvidovrebib.dk",
     secondaryDomains: [
       "hvidovrebib.dk",
@@ -295,7 +295,7 @@ export const libraries = [
   },
   {
     value: "kalundborg",
-    label: "Kalundborg Biblioteker",
+    label: "Kalundborg Bibliotekerne",
     domain: "www.kalundborgbib.dk",
     secondaryDomains: ["kalundborgbib.dk"],
   },
@@ -307,7 +307,7 @@ export const libraries = [
   },
   {
     value: "kobenhavn",
-    label: "Københavns Biblioteker",
+    label: "Københavns Bibliotekerne",
     domain: "bibliotek.kk.dk",
     secondaryDomains: [
       "www.bibliotek.kk.dk",
@@ -317,13 +317,13 @@ export const libraries = [
   },
   {
     value: "koge",
-    label: "KøgeBibliotekerne",
+    label: "Køge Bibliotekerne",
     domain: "www.koegebib.dk",
     secondaryDomains: ["koegebib.dk"],
   },
   {
     value: "kolding",
-    label: "Koldingbibliotekerne",
+    label: "Kolding bibliotekerne",
     domain: "koldingbib.dk",
     secondaryDomains: [
       "www.koldingbib.dk",
@@ -345,7 +345,7 @@ export const libraries = [
   },
   {
     value: "lejre",
-    label: "Lejre Bibliotek & Arkiv",
+    label: "Lejre Bibliotek",
     domain: "lejrebib.dk",
     secondaryDomains: [
       "www.lejrebib.dk",
@@ -355,7 +355,7 @@ export const libraries = [
   },
   {
     value: "lolland",
-    label: "LollandBibliotekerne",
+    label: "Lolland Bibliotekerne",
     domain: "lollandbib.dk",
     secondaryDomains: ["www.lollandbib.dk"],
   },
@@ -389,19 +389,19 @@ export const libraries = [
   },
   {
     value: "naestved",
-    label: "Næstved Bibliotek og Borgerservice",
+    label: "Næstved Bibliotek",
     domain: "www.naesbib.dk",
     secondaryDomains: ["naesbib.dk"],
   },
   {
     value: "norddjurs",
-    label: "Norddjurs Biblioteker",
+    label: "Norddjurs Bibliotekerne",
     domain: "norddjursbib.dk",
     secondaryDomains: ["www.norddjursbib.dk"],
   },
   {
     value: "nordfyn",
-    label: "Bibliotek og Borgerservice Nordfyns Kommune",
+    label: "Nordfyns Bibliotek",
     domain: "www.nordfynsbib.dk",
     secondaryDomains: ["nordfynsbib.dk"],
   },
@@ -419,13 +419,13 @@ export const libraries = [
   },
   {
     value: "odense",
-    label: "Odense Biblioteker og Borgerservice",
+    label: "Odense Bibliotekerne",
     domain: "www.odensebib.dk",
     secondaryDomains: ["odensebib.dk"],
   },
   {
     value: "odsherred",
-    label: "Odsherred Bibliotek og Kulturhuse",
+    label: "Odsherred Bibliotek",
     domain: "odsbib.dk",
     secondaryDomains: ["www.odsbib.dk"],
   },
@@ -453,7 +453,7 @@ export const libraries = [
   },
   {
     value: "ringsted",
-    label: "Ringsted Bibliotek & Borgerservice",
+    label: "Ringsted Bibliotek",
     domain: "ringstedbib.dk",
     secondaryDomains: ["www.ringstedbib.dk"],
   },
@@ -505,7 +505,7 @@ export const libraries = [
   },
   {
     value: "solrod2",
-    label: "Solrød Bibliotek og Kulturhus",
+    label: "Solrød Bibliotek",
     domain: "solbib.dk",
     secondaryDomains: ["www.solbib.dk"],
   },
@@ -535,7 +535,7 @@ export const libraries = [
   },
   {
     value: "sydslesvig",
-    label: "Dansk Centralbibliotek for Sydslesvig e.V.",
+    label: "Sydslesvig bibliotek",
     domain: "www.dcbib.dk",
     secondaryDomains: ["dcbib.dk"],
   },
@@ -553,19 +553,19 @@ export const libraries = [
   },
   {
     value: "taarnby",
-    label: "Tårnby Kommunebiblioteker",
+    label: "Tårnby Bibliotekerne",
     domain: "taarnbybib.dk",
     secondaryDomains: ["www.taarnbybib.dk"],
   },
   {
     value: "thisted",
-    label: "Biblioteket i Thy",
+    label: "Thy Biblioteket",
     domain: "bib.kulturrummet.dk",
     secondaryDomains: [],
   },
   {
     value: "torshavn",
-    label: "Bibliotekerne i Torshavn kommune",
+    label: "Torshavn Bibliotekerne",
     domain: "www.bbs.fo",
     secondaryDomains: ["bbs.fo"],
   },
@@ -583,7 +583,7 @@ export const libraries = [
   },
   {
     value: "vejen",
-    label: "Vejen Kommunes Biblioteker",
+    label: "Vejen Bibliotekerne",
     domain: "vejbib.dk",
     secondaryDomains: ["www.vejbib.dk"],
   },
@@ -595,7 +595,7 @@ export const libraries = [
   },
   {
     value: "vesthimmerland",
-    label: "Vesthimmerlands Biblioteker",
+    label: "Vesthimmerlands Bibliotekerne",
     domain: "www.vhbib.dk",
     secondaryDomains: ["vhbib.dk"],
   },
