@@ -611,4 +611,29 @@ export const libraries = [
     domain: "www.vordingborgbibliotekerne.dk",
     secondaryDomains: ["vordingborgbibliotekerne.dk"],
   },
+  // Libraries that not uses DDF
+  {
+    value: "jammerbugt",
+    label: "Jammerbugt Bibliotekerne",
+    domain: "jammerbugtbibliotekerne.dk",
+    secondaryDomains: ["www.jammerbugtbibliotekerne.dk"],
+  },
+  {
+    value: "slagelse",
+    label: "Slagelse Bibliotekerne",
+    domain: "slagelsebib.dk",
+    secondaryDomains: ["www.slagelsebib.dk"],
+  },
+  {
+    value: "lemvig",
+    label: "Lemvig Bibliotek",
+    domain: "lemvigbib.dk",
+    secondaryDomains: ["www.lemvigbibliotek.dk"],
+  },
+  {
+    value: "tonder",
+    label: "Tønder Bibliotekerne",
+    domain: "tbib.dk",
+    secondaryDomains: ["www.tbib.dk"],
+  },
 ];
