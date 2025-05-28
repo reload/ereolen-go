@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <Script
           id="ti-loader"
-          src="../lib/tiLoader.js"
+          src="/tiLoader.min.js"
           strategy="beforeInteractive"
         />
       </head>
