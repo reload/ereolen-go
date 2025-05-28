@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -20,6 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
+      <head>
+        <Script
+          id="ti-loader"
+          src="../lib/tiLoader.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body
         className={`${sourceSansProLight.className} flex min-h-screen flex-col antialiased`}
       >
