@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { addBasePath } from "@/lib/basePath";
 
 const sourceSansProLight = localFont({
   src: "../fonts/source-sans-pro.light.ttf",
@@ -24,7 +25,7 @@ export default function RootLayout({
       <head>
         <Script
           id="ti-loader"
-          src="/tiLoader.min.js"
+          src={addBasePath("/lib/tiLoader.min.js")}
           strategy="beforeInteractive"
         />
       </head>
