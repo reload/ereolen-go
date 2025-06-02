@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="border-t-primary bg-scondary border-t-40 p-4 pt-8">
+    <header className="border-b-primary bg-scondary border-b-40 p-4 pt-8">
       <div className="mx-auto w-full max-w-6xl">
         <Image
           src={addBasePath("/logo.svg")}
