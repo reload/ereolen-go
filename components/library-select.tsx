@@ -84,7 +84,7 @@ export function LibrarySelect() {
             size={"xl"}
             onClick={handleSubmit}
           >
-            Go
+            OK
           </Button>
         </div>
       </PopoverAnchor>

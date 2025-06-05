@@ -7,7 +7,7 @@ import { Link } from "@/components/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 bg-[#282828] p-4 py-8 text-white">
+    <footer className="border-t-2 p-4 py-8">
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
         <section aria-labelledby="nyttig-information">
           <Typo
@@ -47,12 +47,12 @@ const Footer = () => {
 
         <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
           <Image
-            src={addBasePath("/ereolen-logo-white.svg")}
+            src={addBasePath("/ddf_logo.png")}
             alt="Logo"
             width={300}
             height={200}
           />
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <Typo as="p" variant="small" className="font-bold">
               eReolen er en del af Det Digitale Folkebibliotek
             </Typo>
