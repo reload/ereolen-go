@@ -71,10 +71,10 @@ export function LibrarySelect() {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <HoverCard>
-        <HoverCardTrigger>
-          <PopoverAnchor asChild>
-            <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
+      <PopoverAnchor asChild>
+        <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
+          <HoverCard>
+            <HoverCardTrigger>
               <PopoverTrigger asChild>
                 <Button
                   variant="outline"
@@ -89,23 +89,24 @@ export function LibrarySelect() {
                   <ChevronsUpDown className="ml-2 opacity-50" />
                 </Button>
               </PopoverTrigger>
-              <Button
-                className="ml-auto text-2xl font-bold"
-                size={"xl"}
-                onClick={handleSubmit}
-              >
-                OK
-              </Button>
-            </div>
-          </PopoverAnchor>
-        </HoverCardTrigger>
-        <HoverCardContent className="w-80">
-          <Typography variant={"p"} as={"p"}>
-            Hvis du vil bruge almindeligt bibliotekslogin, skal du vælge den
-            kommune, du bor i.
-          </Typography>
-        </HoverCardContent>
-      </HoverCard>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <Typography variant={"p"} as={"p"}>
+                Hvis du vil bruge almindeligt bibliotekslogin, skal du vælge den
+                kommune, du bor i.
+              </Typography>
+            </HoverCardContent>
+          </HoverCard>
+          <Button
+            className="ml-auto text-2xl font-bold"
+            size={"xl"}
+            onClick={handleSubmit}
+          >
+            OK
+          </Button>
+        </div>
+      </PopoverAnchor>
+
       <PopoverContent
         className="popoverContent mt-2 p-0"
         align="start"
