@@ -18,9 +18,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+} from "@/components/ui/hover-card";
 import { libraries } from "@/data/libraries";
 import useLocalStorage from "@/hooks/useSelectedLibrary";
 import { buildRedirectUrl, cn } from "@/lib/utils";
+import { Typography } from "./typography";
 
 type Library = {
   value: string;
@@ -67,18 +73,30 @@ export function LibrarySelect() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverAnchor asChild>
         <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              role="combobox"
-              className="w-full justify-between text-lg font-bold"
-              aria-expanded={open}
-              size={"xl"}
-            >
-              {selectedLibrary ? selectedLibrary.label : "Vælg dit bibliotek"}
-              <ChevronsUpDown className="ml-2 opacity-50" />
-            </Button>
-          </PopoverTrigger>
+          <HoverCard>
+            <HoverCardTrigger>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  role="combobox"
+                  className="w-full justify-between text-lg font-bold"
+                  aria-expanded={open}
+                  size={"xl"}
+                >
+                  {selectedLibrary
+                    ? selectedLibrary.label
+                    : "Vælg dit bibliotek"}
+                  <ChevronsUpDown className="ml-2 opacity-50" />
+                </Button>
+              </PopoverTrigger>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <Typography variant={"p"} as={"p"}>
+                Hvis du vil bruge almindeligt bibliotekslogin, skal du vælge den
+                kommune, du bor i.
+              </Typography>
+            </HoverCardContent>
+          </HoverCard>
           <Button
             className="ml-auto text-2xl font-bold"
             size={"xl"}
@@ -88,6 +106,7 @@ export function LibrarySelect() {
           </Button>
         </div>
       </PopoverAnchor>
+
       <PopoverContent
         className="popoverContent mt-2 p-0"
         align="start"
