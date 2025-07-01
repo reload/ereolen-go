@@ -1,3 +1,5 @@
+// Note: This file is currently unused in the application.
+// Retained for reference due to significant design changes.
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
