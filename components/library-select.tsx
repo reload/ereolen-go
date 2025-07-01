@@ -71,7 +71,7 @@ export function LibrarySelect() {
             <Button
               variant="outline"
               role="combobox"
-              className="w-full justify-between text-lg font-bold"
+              className="w-full justify-between text-lg"
               aria-expanded={open}
               size={"xl"}
             >
@@ -80,7 +80,7 @@ export function LibrarySelect() {
             </Button>
           </PopoverTrigger>
           <Button
-            className="ml-auto text-2xl font-bold"
+            className="ml-auto text-2xl font-semibold"
             size={"xl"}
             onClick={handleSubmit}
           >

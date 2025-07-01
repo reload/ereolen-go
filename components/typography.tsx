@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 const typographyVariants = cva("", {
   variants: {
     variant: {
-      display: "text-6xl md:text-7xl font-bold leading-tight",
-      h1: "text-4xl md:text-5xl font-bold leading-tight",
-      h2: "text-3xl md:text-4xl font-semibold leading-snug",
-      h3: "text-2xl md:text-3xl font-semibold leading-snug",
-      h4: "text-xl md:text-2xl font-semibold leading-snug",
+      display: "text-6xl md:text-7xl leading-tight",
+      h1: "text-4xl md:text-5xl leading-tight",
+      h2: "text-3xl md:text-4xl leading-snug",
+      h3: "text-2xl md:text-3xl leading-snug",
+      h4: "text-xl md:text-2xl leading-snug",
       p: "text-lg md:text-xl leading-relaxed",
       small: "text-sm md:text-base leading-relaxed",
     },

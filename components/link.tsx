@@ -13,7 +13,7 @@ export function Link({ href, children, className, ...props }: AppLinkProps) {
       href={href}
       className={cn(
         typographyVariants({ variant: "small" }),
-        "font-bold hover:underline",
+        "hover:underline",
         className,
       )}
       {...props}

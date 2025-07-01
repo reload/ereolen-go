@@ -13,6 +13,11 @@ const sourceSansPro = localFont({
       style: "normal",
     },
     {
+      path: "../fonts/source-sans-pro.semibold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
       path: "../fonts/source-sans-pro.bold.ttf",
       weight: "700",
       style: "normal",

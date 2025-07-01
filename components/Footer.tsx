@@ -13,7 +13,7 @@ const Footer = () => {
           <Typo
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-bold"
+            className="mb-4 text-xl font-semibold"
             id="nyttig-information"
           >
             Nyttig information
@@ -34,12 +34,12 @@ const Footer = () => {
           <Typo
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-bold"
+            className="mb-4 text-xl font-semibold"
             id="kontakt-supporten"
           >
             Kontakt supporten
           </Typo>
-          <Typo as="p" variant="small" className="mb-2 font-bold">
+          <Typo as="p" variant="small" className="mb-2">
             Alle hverdage kl. 14.00-18.00
           </Typo>
           <Link href="tel:70263636">Tlf: 7026 3636</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
             height={200}
           />
           <div className="text-center">
-            <Typo as="p" variant="small" className="font-bold">
+            <Typo as="p" variant="small" className="">
               eReolen er en del af Det Digitale Folkebibliotek
             </Typo>
             <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
