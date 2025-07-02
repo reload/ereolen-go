@@ -96,9 +96,9 @@
   --bg-secondary: #f6f2ef;
   --bg-secondary-foreground: #ffffff;
   --card-primary: #bee6fa;
-  --card-primary-foreground: #ffffff;
+  --card-primary-foreground: #195a7d;
   --card-secondary: #ffd2f0;
-  --card-secondary-foreground: #ffffff;
+  --card-secondary-foreground: #642850;
   --shadow-button: 2px 2px 0 0px var(--foreground);
   --shadow-button-hover: 1px 1px 0 0px var(--foreground);
 }
