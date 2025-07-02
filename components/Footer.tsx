@@ -7,7 +7,7 @@ import { Link } from "@/components/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 p-4 py-8">
+    <footer className="bg-bg-secondary border-t-2 p-4 py-8">
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
         <section aria-labelledby="nyttig-information">
           <Typo
@@ -54,7 +54,7 @@ const Footer = () => {
           />
           <div className="text-center">
             <Typo as="p" variant="small" className="">
-              eReolen er en del af Det Digitale Folkebibliotek
+              eReolen GO er en del af Det Digitale Folkebibliotek
             </Typo>
             <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
               Læs mere på detdigitalefolkebibliotek.dk

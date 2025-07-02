@@ -41,6 +41,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* GO specific */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-primary-foreground: var(--bg-primary-foreground);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-secondary-foreground: var(--bg-secondary-foreground);
+  --color-card-primary: var(--card-primary);
+  --color-card-primary-foreground: var(--card-primary-foreground);
+  --color-card-secondary: var(--card-secondary);
+  --color-card-secondary-foreground: var(--card-secondary-foreground);
 }
 
 :root {
@@ -51,14 +61,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-
-  /* --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0); */
-  --primary: oklch(0.508 0.1881 15.53);
+  --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  /* --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0); */
-  --secondary: oklch(0.9551 0 102.07);
+  --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
 
   --muted: oklch(0.97 0 0);
@@ -84,6 +89,18 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --select-width: 42rem;
+
+  /* GO specific */
+  --bg-primary: #fcfaf8;
+  --bg-primary-foreground: #ffffff;
+  --bg-secondary: #f6f2ef;
+  --bg-secondary-foreground: #ffffff;
+  --card-primary: #bee6fa;
+  --card-primary-foreground: #ffffff;
+  --card-secondary: #ffd2f0;
+  --card-secondary-foreground: #ffffff;
+  --shadow-button: 2px 2px 0 0px var(--foreground);
+  --shadow-button-hover: 1px 1px 0 0px var(--foreground);
 }
 
 .dark {
@@ -139,5 +156,11 @@
   .popoverContent {
     width: var(--radix-popover-trigger-width);
     max-height: var(--radix-popover-content-available-height);
+  }
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+  .shadow-button-hover {
+    box-shadow: var(--shadow-button-hover);
   }
 }

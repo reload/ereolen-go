@@ -4,26 +4,21 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { addBasePath } from "@/lib/basePath";
+import Header from "@/components/Header";
 
-const sourceSansPro = localFont({
+const GTFlexa = localFont({
   src: [
     {
-      path: "../fonts/source-sans-pro.light.ttf",
+      path: "../fonts/GT-Flexa-Expanded-Regular.woff2",
       weight: "400",
-      style: "normal",
     },
     {
-      path: "../fonts/source-sans-pro.semibold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../fonts/source-sans-pro.bold.ttf",
-      weight: "700",
-      style: "normal",
+      path: "../fonts/GT-Flexa-Expanded-Medium.woff2",
+      weight: "500",
     },
   ],
-  variable: "--font-source-sans-pro",
+  variable: "--font-headline",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -47,9 +42,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${sourceSansPro.className} flex min-h-screen flex-col antialiased`}
+        className={`${GTFlexa.className} flex min-h-screen flex-col antialiased`}
       >
-        <main className="bg-secondary flex flex-1 px-4">
+        <Header />
+        <main className="bg-bg-primary flex flex-1 px-4">
           <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 md:py-12">
             {children}
           </div>
