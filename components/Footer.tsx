@@ -47,6 +47,7 @@ const Footer = () => {
 
         <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
           <Image
+            className="mx-auto"
             src={addBasePath("/ddf_logo.png")}
             alt="Logo"
             width={300}
