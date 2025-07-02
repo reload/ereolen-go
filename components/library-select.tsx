@@ -80,7 +80,7 @@ export function LibrarySelect() {
             </Button>
           </PopoverTrigger>
           <Button
-            className="ml-auto text-2xl font-semibold"
+            className="ml-auto text-2xl"
             size={"xl"}
             onClick={handleSubmit}
           >

@@ -13,7 +13,7 @@ const Footer = () => {
           <Typo
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-semibold"
+            className="mb-4 text-xl"
             id="nyttig-information"
           >
             Nyttig information
@@ -34,7 +34,7 @@ const Footer = () => {
           <Typo
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-semibold"
+            className="mb-4 text-xl"
             id="kontakt-supporten"
           >
             Kontakt supporten
