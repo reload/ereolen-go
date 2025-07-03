@@ -23,7 +23,9 @@ const Footer = () => {
             <ul className="space-y-1">
               {footerLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link target="_blank" href={link.href}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
