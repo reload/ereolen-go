@@ -270,6 +270,10 @@
 
   /* GO specific */
   .shadow-button {
+    font-family: var(--font-headline);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
     box-shadow: var(--shadow-button);
   }
   .shadow-button-hover {
@@ -336,5 +340,13 @@
     font-weight: var(--typo-body-sm-weight);
     line-height: var(--typo-body-sm-line-height);
     letter-spacing: var(--typo-body-sm-letter-spacing);
+  }
+
+  .text-typo-caption {
+    font-family: var(--font-headline);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0;
   }
 }

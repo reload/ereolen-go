@@ -13,6 +13,7 @@ const typographyVariants = cva("", {
       h4: "text-typo-heading-4",
       p: "text-typo-body-lg",
       small: "text-typo-body-sm",
+      caption: "text-typo-caption",
     },
   },
 

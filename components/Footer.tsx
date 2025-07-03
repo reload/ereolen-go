@@ -7,7 +7,7 @@ import { Link } from "@/components/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-secondary border-t-2 p-4 py-8">
+    <footer className="bg-bg-secondary p-4 py-8">
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
         <section aria-labelledby="nyttig-information">
           <Typo

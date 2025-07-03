@@ -80,7 +80,7 @@ export function LibrarySelect() {
             </Button>
           </PopoverTrigger>
           <Button
-            className="shadow-button focus-visible hover:shadow-button-hover border-foreground text-foreground pointer-events-auto inline-flex h-full w-[100px] items-center justify-center rounded-full border px-3 text-xl whitespace-nowrap uppercase transition hover:translate-x-[1px] hover:translate-y-[1px] hover:cursor-pointer active:translate-x-[4px] active:translate-y-[4px] active:shadow-none disabled:pointer-events-none disabled:opacity-50"
+            className="shadow-button focus-visible hover:shadow-button-hover border-foreground text-foreground pointer-events-auto inline-flex h-full w-[100px] items-center justify-center rounded-full border px-3 whitespace-nowrap uppercase transition hover:translate-x-[1px] hover:translate-y-[1px] hover:cursor-pointer active:translate-x-[4px] active:translate-y-[4px] active:shadow-none disabled:pointer-events-none disabled:opacity-50"
             variant="outline-custom"
             size={"xl"}
             onClick={handleSubmit}

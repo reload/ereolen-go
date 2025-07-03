@@ -48,7 +48,7 @@ const SupportDownloadCards = () => {
           width={150}
           height={150}
         />
-        <Typo as="p" variant="p" className="!font-bold">
+        <Typo as="p" variant="caption">
           Hjælp og support
         </Typo>
       </CardWrapper>
@@ -64,7 +64,7 @@ const SupportDownloadCards = () => {
           width={150}
           height={150}
         />
-        <Typo as="p" variant="p" className="!font-bold">
+        <Typo as="p" variant="caption">
           Download GO-appen
         </Typo>
       </CardWrapper>
