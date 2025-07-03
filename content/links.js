@@ -1,19 +1,19 @@
 export const footerLinks = [
   {
     label: "Hjælp og support",
-    href: "https://www.detdigitalefolkebibliotek.dk/ereolensupport",
+    href: "https://www.detdigitalefolkebibliotek.dk/ereolen-go-support",
   },
   {
-    label: "Hent eReolens app",
+    label: "Download GO-appen",
     href: "https://www.detdigitalefolkebibliotek.dk/hent-ereolens-app",
   },
   {
-    label: "Materialevalg",
-    href: "https://www.detdigitalefolkebibliotek.dk/materialevalg",
+    label: "Info om GO",
+    href: "https://www.detdigitalefolkebibliotek.dk/ereolen-go",
   },
   {
-    label: "Redaktion",
-    href: "https://www.detdigitalefolkebibliotek.dk/redaktion",
+    label: "Skoler og UNI-login",
+    href: "https://www.detdigitalefolkebibliotek.dk/om-uni-login",
   },
   {
     label: "Driftsinfo",
@@ -22,7 +22,7 @@ export const footerLinks = [
 ];
 
 export const helpANdSupportLink =
-  "https://www.detdigitalefolkebibliotek.dk/ereolensupport";
+  "https://www.detdigitalefolkebibliotek.dk/ereolen-go-support";
 
 export const downloadAppLinks = {
   android:
