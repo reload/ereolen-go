@@ -41,7 +41,7 @@ const SupportDownloadCards = () => {
         href={helpANdSupportLink}
         className="bg-card-primary text-card-primary-foreground hover:no-underline"
       >
-        <Typo as="p" variant="h4" className="font-bold">
+        <Typo as="p" variant="p" className="!font-bold">
           Hjælp og support
         </Typo>
       </CardWrapper>
@@ -51,7 +51,7 @@ const SupportDownloadCards = () => {
         href={downloadLink}
         className="bg-card-secondary text-card-secondary-foreground hover:no-underline"
       >
-        <Typo as="p" variant="h4" className="font-bold">
+        <Typo as="p" variant="p" className="!font-bold">
           Download GO-appen
         </Typo>
       </CardWrapper>

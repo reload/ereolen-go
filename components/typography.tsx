@@ -7,12 +7,12 @@ const typographyVariants = cva("", {
   variants: {
     variant: {
       display: "text-6xl md:text-7xl leading-tight",
-      h1: "text-4xl md:text-5xl leading-tight",
-      h2: "text-3xl md:text-4xl leading-snug",
-      h3: "text-2xl md:text-3xl leading-snug",
-      h4: "text-xl md:text-2xl leading-snug",
-      p: "text-lg md:text-xl leading-relaxed",
-      small: "text-sm md:text-base leading-relaxed",
+      h1: "text-typo-heading-1",
+      h2: "text-typo-heading-2",
+      h3: "text-typo-heading-3",
+      h4: "text-typo-heading-4",
+      p: "text-typo-body-lg",
+      small: "text-typo-body-sm",
     },
   },
 

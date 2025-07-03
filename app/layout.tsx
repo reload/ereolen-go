@@ -42,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${GTFlexa.className} flex min-h-screen flex-col antialiased`}
+        className={`${GTFlexa.variable} flex min-h-screen flex-col antialiased`}
       >
         <Header />
         <main className="bg-bg-primary flex flex-1 px-4">
