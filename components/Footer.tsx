@@ -44,7 +44,15 @@ const Footer = () => {
           <Typo as="p" variant="small" className="mb-2">
             Alle hverdage kl. 14.00-18.00
           </Typo>
-          <Link href="tel:70263636">Tlf: 7026 3636</Link>
+          <Link className="block" href="tel:70263636">
+            Tlf: 7026 3636
+          </Link>
+          <Link
+            className="block"
+            href="mailto:redaktionen@detdigitalefolkebibliotek.dk"
+          >
+            Mail: redaktionen@detdigitalefolkebibliotek.dk
+          </Link>
         </section>
 
         <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
