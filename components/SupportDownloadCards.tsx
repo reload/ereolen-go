@@ -1,12 +1,13 @@
 "use client";
-import { downloadAppLinks, helpANdSupportLink } from "@/content/links";
+import { helpANdSupportLink } from "@/content/links";
 import React from "react";
 import { Typography as Typo } from "@/components/typography";
-import { isAndroid } from "react-device-detect";
 import { twMerge } from "tailwind-merge";
 import { Link } from "@/components/link";
 import Image from "next/image";
 import { addBasePath } from "@/lib/basePath";
+import { useDeviceDetection } from "@/hooks/useDeviceDetection";
+import { getDownloadLink } from "@/lib/getDownloadLink";
 
 type CardWrapperProps = {
   children: React.ReactNode;
@@ -31,9 +32,8 @@ const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
 };
 
 const SupportDownloadCards = () => {
-  const downloadLink = isAndroid
-    ? downloadAppLinks.android
-    : downloadAppLinks.ios;
+  const deviceInfo = useDeviceDetection();
+  const downloadLink = getDownloadLink(deviceInfo);
 
   return (
     <section className="mx-auto grid w-full max-w-lg gap-6 md:grid-cols-2">
