@@ -71,7 +71,7 @@ export function LibrarySelect() {
             <Button
               variant="outline"
               role="combobox"
-              className="w-full justify-between text-lg"
+              className={`w-full justify-between ${selectedLibrary ? "text-sm" : "text-lg"}`}
               aria-expanded={open}
               size={"xl"}
             >
