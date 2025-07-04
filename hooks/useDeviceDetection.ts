@@ -1,5 +1,5 @@
 "use client";
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 
 export interface DeviceDetection {
   isMac: boolean;
@@ -22,20 +22,23 @@ export interface DeviceDetection {
  * @returns DeviceDetection object with platform and device type information
  */
 export const useDeviceDetection = (): DeviceDetection => {
-  return useMemo(() => {
-    // Safely access navigator in browser environment
+  // Initialize with default values to prevent hydration mismatch
+  const [deviceInfo, setDeviceInfo] = useState<DeviceDetection>({
+    isMac: false,
+    isWindows: false,
+    isLinux: false,
+    isActuallyMobile: false,
+    isAndroidDevice: false,
+    isIOSDevice: false,
+    isDesktop: true,
+    userAgent: "",
+    platform: "",
+  });
+
+  useEffect(() => {
+    // Only run detection on client side after hydration
     if (typeof window === "undefined" || typeof navigator === "undefined") {
-      return {
-        isMac: false,
-        isWindows: false,
-        isLinux: false,
-        isActuallyMobile: false,
-        isAndroidDevice: false,
-        isIOSDevice: false,
-        isDesktop: false,
-        userAgent: "",
-        platform: "",
-      };
+      return;
     }
 
     const userAgent = navigator.userAgent;
@@ -70,7 +73,7 @@ export const useDeviceDetection = (): DeviceDetection => {
     // Desktop is anything that's not actually mobile
     const isDesktop = !isActuallyMobile;
 
-    return {
+    setDeviceInfo({
       isMac,
       isWindows,
       isLinux,
@@ -80,6 +83,8 @@ export const useDeviceDetection = (): DeviceDetection => {
       isDesktop,
       userAgent,
       platform,
-    };
-  }, []); // Empty dependency array since navigator properties don't change
+    });
+  }, []); // Empty dependency array - only run once after mount
+
+  return deviceInfo;
 };
