@@ -4,10 +4,6 @@ export const footerLinks = [
     href: "https://www.detdigitalefolkebibliotek.dk/ereolen-go-support",
   },
   {
-    label: "Download GO-appen",
-    href: "https://www.detdigitalefolkebibliotek.dk/hent-ereolens-app",
-  },
-  {
     label: "Info om GO",
     href: "https://www.detdigitalefolkebibliotek.dk/ereolen-go",
   },
