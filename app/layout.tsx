@@ -27,8 +27,23 @@ const sourceSansPro = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://reload.github.io/ereolen/"),
   title: "eReolen",
-  description: "eReolen er rykket til dit lokale bibliotek",
+  description:
+    "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+  openGraph: {
+    title: "eReolen",
+    description:
+      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    images: ["/ereolen_app.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "eReolen",
+    description:
+      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    images: ["/ereolen_app.png"],
+  },
 };
 
 export default function RootLayout({
