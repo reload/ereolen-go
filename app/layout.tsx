@@ -25,6 +25,19 @@ export const metadata: Metadata = {
   title: "GO",
   description:
     "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+  openGraph: {
+    title: "GO",
+    description:
+      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    images: ["/eReolenGoApp_trim.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GO",
+    description:
+      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    images: ["/eReolenGoApp_trim.png"],
+  },
 };
 
 export default function RootLayout({
