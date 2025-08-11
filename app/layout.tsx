@@ -22,8 +22,9 @@ const GTFlexa = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "eReolen",
-  description: "eReolen er rykket til dit lokale bibliotek",
+  title: "GO",
+  description:
+    "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
 };
 
 export default function RootLayout({
