@@ -30,19 +30,19 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://reload.github.io/ereolen/"),
   title: "eReolen",
   description:
-    "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
   openGraph: {
     title: "eReolen",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
-    images: ["/ereolen_app.png"],
+      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    images: ["/ereolen_logo_some.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "eReolen",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
-    images: ["/ereolen_app.png"],
+      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    images: ["/ereolen_logo_some.png"],
   },
 };
 
