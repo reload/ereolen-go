@@ -33,6 +33,7 @@ type Library = {
   label: string;
   domain: string;
   secondaryDomains: string[];
+  customPath?: string;
 };
 
 export function LibrarySelect() {
@@ -64,7 +65,11 @@ export function LibrarySelect() {
     const searchParams = new URLSearchParams(window.location.search);
     const originalPath = searchParams.get("from") || "/";
 
-    const fullUrl = buildRedirectUrl(originalPath, selectedLibrary.domain);
+    const fullUrl = buildRedirectUrl(
+      originalPath,
+      selectedLibrary.domain,
+      selectedLibrary.customPath,
+    );
 
     return (window.location.href = fullUrl);
   };

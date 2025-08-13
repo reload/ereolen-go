@@ -19,6 +19,7 @@ export function buildRedirectParam(pathname: string, search: string): string {
 export function buildRedirectUrl(
   originalPath: string,
   libraryDomain: string,
+  customPath?: string,
 ): string {
   const decodedPath = decodeURIComponent(originalPath);
   const pathSegments = decodedPath.split("/").filter(Boolean);
@@ -31,8 +32,13 @@ export function buildRedirectUrl(
   const idExists = objectFollowsTing && pathSegments.length > tingIndex + 2;
   const workId = idExists ? pathSegments[tingIndex + 2] : null;
 
-  const redirectPath = workId ? `/work/work-of:${workId}` : "/";
+  if (workId) {
+    const redirectUrl = new URL(`https://${libraryDomain}`);
+    redirectUrl.pathname = `/work/work-of:${workId}`;
+    return redirectUrl.toString();
+  }
 
+  const redirectPath = customPath || "/om-ereolen";
   const redirectUrl = new URL(`https://${libraryDomain}`);
   redirectUrl.pathname = redirectPath;
 

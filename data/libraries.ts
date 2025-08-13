@@ -611,29 +611,33 @@ export const libraries = [
     domain: "www.go.vordingborgbibliotekerne.dk",
     secondaryDomains: ["go.vordingborgbibliotekerne.dk"],
   },
-  // Libraries that not uses DDF
+  // Libraries with a customPath property (e.g., Inlead libraries)
   {
     value: "jammerbugt",
     label: "Jammerbugt Bibliotekerne",
     domain: "go.jammerbugtbibliotekerne.dk",
     secondaryDomains: ["www.go.jammerbugtbibliotekerne.dk"],
+    // customPath: "",
   },
   {
     value: "slagelse",
     label: "Slagelse Bibliotekerne",
     domain: "go.slagelsebib.dk",
     secondaryDomains: ["www.go.slagelsebib.dk"],
+    // customPath: "",
   },
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
     domain: "go.lemvigbib.dk",
     secondaryDomains: ["www.go.lemvigbibliotek.dk"],
+    // customPath: "",
   },
   {
     value: "tonder",
     label: "Tønder Bibliotekerne",
     domain: "go.tbib.dk",
     secondaryDomains: ["www.go.tbib.dk"],
+    customPath: "/e-material/ereolen-go",
   },
 ];
