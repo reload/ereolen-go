@@ -13,7 +13,7 @@ export default function Home() {
         <HtmlContent src="/content/main.html" />
         <div className="mx-auto mt-6 space-y-4 md:mt-16">
           <Typography variant={"h4"} as={"h2"}>
-            Vælg din kommune for at gå til det nye GO
+            Vælg dit bibliotek for at gå til det nye GO
           </Typography>
           <LibrarySelect />
         </div>

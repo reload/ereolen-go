@@ -25,19 +25,19 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://reload.github.io/ereolen-go/"),
   title: "GO",
   description:
-    "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
+    "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
   openGraph: {
     title: "GO",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
-    images: ["/eReolenGoApp_trim.png"],
+      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    images: ["/ereolen_logo_some_go.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "GO",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg din kommune her.",
-    images: ["/eReolenGoApp_trim.png"],
+      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    images: ["/ereolen_logo_some_go.jpg"],
   },
 };
 
