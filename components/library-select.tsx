@@ -18,9 +18,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+} from "@/components/ui/hover-card";
 import { libraries } from "@/data/libraries";
 import useLocalStorage from "@/hooks/useSelectedLibrary";
 import { buildRedirectUrl, cn } from "@/lib/utils";
+import { Typography } from "./typography";
 
 type Library = {
   value: string;
@@ -67,18 +73,30 @@ export function LibrarySelect() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverAnchor asChild>
         <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              role="combobox"
-              className={`w-full justify-between ${selectedLibrary ? "text-sm" : "text-lg"}`}
-              aria-expanded={open}
-              size={"xl"}
-            >
-              {selectedLibrary ? selectedLibrary.label : "Vælg dit bibliotek"}
-              <ChevronsUpDown className="ml-2 opacity-50" />
-            </Button>
-          </PopoverTrigger>
+          <HoverCard>
+            <HoverCardTrigger>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  role="combobox"
+                  className={`w-full justify-between ${selectedLibrary ? "text-sm" : "text-lg"}`}
+                  aria-expanded={open}
+                  size={"xl"}
+                >
+                  {selectedLibrary
+                    ? selectedLibrary.label
+                    : "Vælg dit bibliotek"}
+                  <ChevronsUpDown className="ml-2 opacity-50" />
+                </Button>
+              </PopoverTrigger>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <Typography variant={"p"} as={"p"}>
+                Hvis du vil bruge almindeligt bibliotekslogin, skal du vælge den
+                kommune, du bor i.
+              </Typography>
+            </HoverCardContent>
+          </HoverCard>
           <Button
             className="shadow-button focus-visible hover:shadow-button-hover border-foreground text-foreground pointer-events-auto inline-flex h-full w-[100px] items-center justify-center rounded-full border px-3 whitespace-nowrap uppercase transition hover:translate-x-[1px] hover:translate-y-[1px] hover:cursor-pointer active:translate-x-[4px] active:translate-y-[4px] active:shadow-none disabled:pointer-events-none disabled:opacity-50"
             variant="outline-custom"
