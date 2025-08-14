@@ -38,7 +38,7 @@ export function buildRedirectUrl(
     return redirectUrl.toString();
   }
 
-  const redirectPath = customPath || "/om-ereolen";
+  const redirectPath = customPath || "/";
   const redirectUrl = new URL(`https://${libraryDomain}`);
   redirectUrl.pathname = redirectPath;
 

@@ -638,6 +638,6 @@ export const libraries = [
     label: "Tønder Bibliotekerne",
     domain: "go.tbib.dk",
     secondaryDomains: ["www.go.tbib.dk"],
-    customPath: "/e-material/ereolen-go",
+    // customPath: "/e-material/ereolen-go",
   },
 ];

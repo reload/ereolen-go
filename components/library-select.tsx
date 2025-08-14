@@ -68,7 +68,7 @@ export function LibrarySelect() {
     const fullUrl = buildRedirectUrl(
       originalPath,
       selectedLibrary.domain,
-      selectedLibrary.customPath,
+      // selectedLibrary.customPath,
     );
 
     return (window.location.href = fullUrl);
