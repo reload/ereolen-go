@@ -1,4 +1,4 @@
-import { footerLinks } from "@/content/links";
+import { contactFormLink, footerLinks } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
@@ -48,11 +48,18 @@ const Footer = () => {
             Tlf: 7026 3636
           </Link>
           <Link
-            className="block"
+            className="mb-2 block"
             href="mailto:redaktionen@detdigitalefolkebibliotek.dk"
           >
             Mail: redaktionen@detdigitalefolkebibliotek.dk
           </Link>
+          <Typo as="p" variant="small" className="mb-2">
+            Eller skriv til os uden for vores åbningstid{" "}
+            <Link href={contactFormLink} className="underline">
+              her
+            </Link>
+            .
+          </Typo>
         </section>
 
         <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">

@@ -17,6 +17,9 @@ export const footerLinks = [
   },
 ];
 
+export const contactFormLink =
+  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
+
 export const helpANdSupportLink =
   "https://www.detdigitalefolkebibliotek.dk/ereolen-go-support";
 
