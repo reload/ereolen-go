@@ -12,6 +12,10 @@ export const footerLinks = [
     href: "https://www.detdigitalefolkebibliotek.dk/om-uni-login",
   },
   {
+    label: "Materialevalg",
+    href: "https://www.detdigitalefolkebibliotek.dk/materialevalg",
+  },
+  {
     label: "Driftsinfo",
     href: "https://www.detdigitalefolkebibliotek.dk/driftsinfo",
   },
