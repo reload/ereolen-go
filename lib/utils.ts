@@ -21,9 +21,12 @@ export function buildRedirectUrl(
   libraryDomain: string,
   customPath?: string,
 ): string {
-  const decodedPath = decodeURIComponent(originalPath);
+  // Split the original path into pathname and search parts, ignoring all query parameters
+  const [pathname] = originalPath.split("?");
+  const decodedPath = decodeURIComponent(pathname);
   const pathSegments = decodedPath.split("/").filter(Boolean);
-  // Step 1: Find 'ting' and ensure it’s followed by 'object'
+
+  // Step 1: Find 'ting' and ensure it's followed by 'object'
   const tingIndex = pathSegments.indexOf("ting");
   const objectFollowsTing =
     tingIndex >= 0 && pathSegments[tingIndex + 1] === "object";
