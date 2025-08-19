@@ -44,7 +44,7 @@ const Footer = () => {
           <Typo as="p" variant="small" className="mb-2">
             Alle hverdage kl. 14.00-18.00
           </Typo>
-          <Link className="block" href="tel:70263636">
+          <Link className="mb-2 block" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
           <Typo as="p" variant="small" className="mb-2">
