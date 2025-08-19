@@ -47,7 +47,7 @@ const Footer = () => {
           <Link className="mb-2 block" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
-          <Typo as="p" variant="small" className="mb-2 font-semibold">
+          <Typo as="p" variant="small" className="mb-2">
             For henvendelser uden for åbningstiden benyt venligst vores
             kontaktformular{" "}
             <Link href={contactFormLink} className="underline">
