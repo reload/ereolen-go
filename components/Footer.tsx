@@ -51,7 +51,7 @@ const Footer = () => {
             className="mb-2 block"
             href="mailto:redaktionen@detdigitalefolkebibliotek.dk"
           >
-            Mail: redaktionen@detdigitalefolkebibliotek.dk
+            redaktionen@detdigitalefolkebibliotek.dk
           </Link>
           <Typo as="p" variant="small" className="mb-2">
             Eller skriv til os uden for vores åbningstid{" "}
