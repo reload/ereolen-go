@@ -47,12 +47,6 @@ const Footer = () => {
           <Link className="block" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
-          <Link
-            className="mb-2 block"
-            href="mailto:redaktionen@detdigitalefolkebibliotek.dk"
-          >
-            redaktionen@detdigitalefolkebibliotek.dk
-          </Link>
           <Typo as="p" variant="small" className="mb-2">
             Eller skriv til os uden for vores åbningstid{" "}
             <Link href={contactFormLink} className="underline">
