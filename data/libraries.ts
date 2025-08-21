@@ -611,33 +611,41 @@ export const libraries = [
     domain: "www.go.vordingborgbibliotekerne.dk",
     secondaryDomains: ["go.vordingborgbibliotekerne.dk"],
   },
-  // Libraries with a customPath property (e.g., Inlead libraries)
+  // Libraries with a customPath property or external redirect (e.g., Inlead libraries)
   {
     value: "jammerbugt",
     label: "Jammerbugt Bibliotekerne",
     domain: "go.jammerbugtbibliotekerne.dk",
     secondaryDomains: ["www.go.jammerbugtbibliotekerne.dk"],
-    // customPath: "",
+    externalRedirectUrl:
+      "https://www.jammerbugtbibliotekerne.dk/e-material/ereolen-go",
   },
   {
     value: "slagelse",
     label: "Slagelse Bibliotekerne",
     domain: "go.slagelsebib.dk",
     secondaryDomains: ["www.go.slagelsebib.dk"],
-    // customPath: "",
+    externalRedirectUrl: "https://www.slagelsebib.dk/e-material/ereolen-go",
   },
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
     domain: "go.lemvigbib.dk",
     secondaryDomains: ["www.go.lemvigbibliotek.dk"],
-    // customPath: "",
+    externalRedirectUrl: "https://www.lemvigbibliotek.dk/e-material/ereolen-go",
   },
   {
     value: "tonder",
     label: "Tønder Bibliotekerne",
     domain: "go.tbib.dk",
     secondaryDomains: ["www.go.tbib.dk"],
-    // customPath: "/e-material/ereolen-go",
+    externalRedirectUrl: "https://tbib.dk/e-material/ereolen-go",
+  },
+  {
+    value: "katak",
+    label: "Katak",
+    domain: "go.katak.gl",
+    secondaryDomains: [],
+    externalRedirectUrl: "https://www.katak.gl/da/born",
   },
 ];

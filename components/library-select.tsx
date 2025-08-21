@@ -34,6 +34,7 @@ type Library = {
   domain: string;
   secondaryDomains: string[];
   customPath?: string;
+  externalRedirectUrl?: string;
 };
 
 export function LibrarySelect() {
@@ -69,6 +70,7 @@ export function LibrarySelect() {
       originalPath,
       libraryDomain: selectedLibrary.domain,
       // customPath: selectedLibrary.customPath,
+      externalRedirectUrl: selectedLibrary.externalRedirectUrl,
     });
 
     return (window.location.href = fullUrl);
