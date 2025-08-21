@@ -59,11 +59,11 @@ export function LibrarySelect() {
     const searchParams = new URLSearchParams(window.location.search);
     const originalPath = searchParams.get("from") || "/";
 
-    const fullUrl = buildRedirectUrl(
+    const fullUrl = buildRedirectUrl({
       originalPath,
-      selectedLibrary.domain,
-      selectedLibrary.customPath,
-    );
+      libraryDomain: selectedLibrary.domain,
+      customPath: selectedLibrary.customPath,
+    });
 
     return (window.location.href = fullUrl);
   };
