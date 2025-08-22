@@ -99,8 +99,9 @@ export function LibrarySelect() {
             </HoverCardTrigger>
             <HoverCardContent className="w-80">
               <Typography variant={"p"} as={"p"}>
-                Hvis du vil bruge almindeligt bibliotekslogin, skal du vælge den
-                kommune, du bor i.
+                Hvis din skole er tilmeldt GO med UNI-login, skal du vælge
+                skolens kommune. Hvis du vil bruge almindeligt bibliotekslogin,
+                skal du vælge den kommune, du bor i.
               </Typography>
             </HoverCardContent>
           </HoverCard>
