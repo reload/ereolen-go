@@ -7,6 +7,7 @@ export default function NotFound() {
     const { pathname, search } = window.location;
 
     const redirectTo = buildRedirectParam(pathname, search);
+    console.log("🚀 ~ NotFound ~ redirectTo:", redirectTo);
     window.location.replace(redirectTo);
   }, []);
 
