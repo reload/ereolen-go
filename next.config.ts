@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NODE_ENV === "production" ? "/ereolen-go" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/" : "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // Prefix routes and assets for GitHub Pages under /ereolen-go
+  // Prefix routes and assets for GitHub Pages under /
   basePath: basePath,
   assetPrefix: basePath,
   // Ensure static export generates trailing slashes for directories

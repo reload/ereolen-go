@@ -22,7 +22,7 @@ const GTFlexa = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://reload.github.io/ereolen-go/"),
+  metadataBase: new URL("https://ereolengo.dk"),
   title: "GO",
   description:
     "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
