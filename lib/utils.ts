@@ -6,9 +6,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function buildRedirectParam(pathname: string, search: string): string {
-  // const basePath = pathname.startsWith("/") ? "/" : "";
   const fullPath = pathname + search;
-  return `${fullPath}/?from=${encodeURIComponent(fullPath)}`;
+  return `/?from=${encodeURIComponent(fullPath)}`;
 }
 
 type BuildRedirectUrlParams = {
