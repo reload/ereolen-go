@@ -636,10 +636,10 @@ export const libraries = [
   },
   {
     value: "tonder",
-    label: "Tønder Bibliotekerne",
+    label: "Tønder Kommunes Biblioteker",
     domain: "go.tbib.dk",
     secondaryDomains: ["www.go.tbib.dk"],
-    externalRedirectUrl: "https://tbib.dk/e-material/ereolen-go",
+    // externalRedirectUrl: "Has a go site",
   },
   {
     value: "katak",
