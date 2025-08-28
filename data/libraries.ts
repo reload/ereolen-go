@@ -142,7 +142,7 @@ export const libraries = [
   {
     value: "frederikshavn",
     label: "Frederikshavn Bibliotekerne",
-    domain: "bibl.go.frederikshavn.dk",
+    domain: "go.bibl.frederikshavn.dk",
     secondaryDomains: [],
   },
   {
