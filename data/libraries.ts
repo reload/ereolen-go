@@ -76,6 +76,12 @@ export const libraries = [
     secondaryDomains: ["go.bronderslevbib.dk"],
   },
   {
+    value: "býarbókasavnið",
+    label: "Býarbókasavnið",
+    domain: "https://www.go.bbs.fo/",
+    secondaryDomains: [],
+  },
+  {
     value: "dragor",
     label: "Dragør Bibliotek",
     domain: "www.go.drabib.dk",
@@ -535,7 +541,7 @@ export const libraries = [
   },
   {
     value: "sydslesvig",
-    label: "Sydslesvig bibliotek",
+    label: "Dansk Centralbibliotek for Sydslesvig",
     domain: "www.go.dcbib.dk",
     secondaryDomains: ["go.dcbib.dk"],
   },
@@ -559,7 +565,7 @@ export const libraries = [
   },
   {
     value: "thisted",
-    label: "Thy Biblioteket",
+    label: "Biblioteket KulturRummet (Thy)",
     domain: "go.bib.kulturrummet.dk",
     secondaryDomains: [],
   },
@@ -583,7 +589,7 @@ export const libraries = [
   },
   {
     value: "vejen",
-    label: "Vejen Bibliotekerne",
+    label: "Vejen Kommunes Biblioteker",
     domain: "go.vejbib.dk",
     secondaryDomains: ["www.go.vejbib.dk"],
   },
@@ -643,7 +649,7 @@ export const libraries = [
   },
   {
     value: "katak",
-    label: "Katak",
+    label: "Nunatta Atuagaateqarfia",
     domain: "go.katak.gl",
     secondaryDomains: [],
     externalRedirectUrl: "https://www.katak.gl/da/born",
