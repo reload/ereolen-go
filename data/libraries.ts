@@ -78,7 +78,7 @@ export const libraries = [
   {
     value: "býarbókasavnið",
     label: "Býarbókasavnið",
-    domain: "https://www.go.bbs.fo/",
+    domain: "www.go.bbs.fo/",
     secondaryDomains: [],
   },
   {
@@ -568,12 +568,6 @@ export const libraries = [
     label: "Biblioteket KulturRummet (Thy)",
     domain: "go.bib.kulturrummet.dk",
     secondaryDomains: [],
-  },
-  {
-    value: "torshavn",
-    label: "Torshavn Bibliotekerne",
-    domain: "www.go.bbs.fo",
-    secondaryDomains: ["bbs.fo"],
   },
   {
     value: "vallensbaek",
