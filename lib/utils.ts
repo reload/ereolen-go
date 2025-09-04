@@ -14,7 +14,6 @@ type BuildRedirectUrlParams = {
   originalPath: string;
   libraryDomain: string;
   customPath?: string;
-  externalRedirectUrl?: string;
 };
 
 /**
@@ -27,13 +26,7 @@ export function buildRedirectUrl({
   originalPath,
   libraryDomain,
   customPath,
-  externalRedirectUrl,
 }: BuildRedirectUrlParams): string {
-  // If this library has an external redirect URL, use it directly without any path translation
-  if (externalRedirectUrl) {
-    return externalRedirectUrl;
-  }
-
   // Split the original path into pathname and search parts, ignoring all query parameters
   const [pathname] = originalPath.split("?");
   const decodedPath = decodeURIComponent(pathname);

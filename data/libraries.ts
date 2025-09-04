@@ -611,41 +611,35 @@ export const libraries = [
     domain: "www.go.vordingborgbibliotekerne.dk",
     secondaryDomains: ["go.vordingborgbibliotekerne.dk"],
   },
-  // Libraries with a customPath property or external redirect (e.g., Inlead libraries)
+  // External libraries
   {
     value: "jammerbugt",
     label: "Jammerbugt Bibliotekerne",
     domain: "go.jammerbugtbibliotekerne.dk",
     secondaryDomains: ["www.go.jammerbugtbibliotekerne.dk"],
-    externalRedirectUrl:
-      "https://www.jammerbugtbibliotekerne.dk/e-material/ereolen-go",
   },
   {
     value: "slagelse",
     label: "Slagelse Bibliotekerne",
     domain: "go.slagelsebib.dk",
     secondaryDomains: ["www.go.slagelsebib.dk"],
-    externalRedirectUrl: "https://www.slagelsebib.dk/e-material/ereolen-go",
   },
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
     domain: "go.lemvigbib.dk",
     secondaryDomains: ["www.go.lemvigbibliotek.dk"],
-    externalRedirectUrl: "https://www.lemvigbibliotek.dk/e-material/ereolen-go",
   },
   {
     value: "tonder",
     label: "Tønder Kommunes Biblioteker",
     domain: "go.tbib.dk",
     secondaryDomains: ["www.go.tbib.dk"],
-    // externalRedirectUrl: "Has a go site",
   },
   {
     value: "katak",
     label: "Nunatta Atuagaateqarfia",
     domain: "go.katak.gl",
     secondaryDomains: [],
-    externalRedirectUrl: "https://www.katak.gl/da/born",
   },
 ];
