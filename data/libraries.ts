@@ -627,7 +627,7 @@ export const libraries = [
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
-    domain: "go.lemvigbib.dk",
+    domain: "www.go.lemvigbib.dk",
     secondaryDomains: ["www.go.lemvigbibliotek.dk"],
   },
   {
