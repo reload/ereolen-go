@@ -147,7 +147,7 @@ export const libraries = [
   },
   {
     value: "frederikshavn",
-    label: "Frederikshavns",
+    label: "Frederikshavn",
     domain: "go.bibl.frederikshavn.dk",
     secondaryDomains: [],
   },
@@ -313,7 +313,7 @@ export const libraries = [
   },
   {
     value: "kobenhavn",
-    label: "Københavns",
+    label: "København",
     domain: "go.bibliotek.kk.dk",
     secondaryDomains: [
       "www.go.bibliotek.kk.dk",
@@ -425,7 +425,7 @@ export const libraries = [
   },
   {
     value: "odense",
-    label: "Odense Bibliotekerne",
+    label: "Odense",
     domain: "www.go.odensebib.dk",
     secondaryDomains: ["go.odensebib.dk"],
   },
@@ -595,7 +595,7 @@ export const libraries = [
   },
   {
     value: "vesthimmerland",
-    label: "Vesthimmerlands",
+    label: "Vesthimmerland",
     domain: "www.go.vhbib.dk",
     secondaryDomains: ["go.vhbib.dk"],
   },
