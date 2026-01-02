@@ -1,4 +1,3 @@
-import Script from "next/script";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -54,9 +53,9 @@ export default function RootLayout({
           data-consent-src={addBasePath("/tiLoader.min.js")}
           key="ti-loader"
           id="ti-loader"
-          strategy="afterInteractive"
+          defer
         />
-        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js"
+        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" async
     data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
       </head>
       <body
