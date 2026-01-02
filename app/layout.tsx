@@ -49,12 +49,15 @@ export default function RootLayout({
   return (
     <html lang="da">
       <head>
-        <Script
+        <script
+          data-category-consent="cookie_cat_statistic"
+          data-consent-src={addBasePath("/tiLoader.min.js")}
           key="ti-loader"
           id="ti-loader"
-          src={addBasePath("/tiLoader.min.js")}
           strategy="afterInteractive"
         />
+        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js"
+    data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
       </head>
       <body
         className={`${GTFlexa.variable} flex min-h-screen flex-col antialiased`}
