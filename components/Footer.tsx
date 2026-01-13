@@ -42,7 +42,8 @@ const Footer = () => {
             Kontakt supporten
           </Typo>
           <Typo as="p" variant="small" className="mb-2">
-            Alle hverdage kl. 14.00-18.00
+            Alle hverdage kl. 13.00-17.00 <br />
+            Fredag kl. 11.00-15.00
           </Typo>
           <Link className="mb-2 block" href="tel:70263636">
             Tlf: 7026 3636
