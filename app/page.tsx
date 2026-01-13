@@ -1,5 +1,4 @@
 import { LibrarySelect } from "@/components/library-select";
-import HtmlContent from "@/components/HtmlContent";
 import SupportDownloadCards from "@/components/SupportDownloadCards";
 import { Typography } from "@/components/typography";
 
@@ -10,12 +9,16 @@ export default function Home() {
         <Typography variant={"h1"} as={"h1"} className="md:text-center">
           eReolen GO er flyttet
         </Typography>
-        <HtmlContent src="/content/main.html" />
-        <div className="mx-auto mt-6 space-y-4 md:mt-16">
+        <div className="mx-auto mt-6 flex w-full flex-col justify-center space-y-4 md:mt-16">
           <Typography variant={"h4"} as={"h2"}>
             Vælg din kommune for at gå til dit lokale GO-site
           </Typography>
-          <LibrarySelect />
+          <LibrarySelect
+            className="mx-auto"
+            hoverHelpText="Hvis din skole er tilmeldt GO med UNI-login, skal du vælge
+                skolens kommune. Hvis du vil bruge almindeligt bibliotekslogin,
+                skal du vælge den kommune, du bor i."
+          />
         </div>
       </div>
       <SupportDownloadCards />

@@ -36,7 +36,15 @@ type Library = {
   customPath?: string;
 };
 
-export function LibrarySelect() {
+export function LibrarySelect({
+  hoverHelpText,
+  className,
+  customPath,
+}: {
+  hoverHelpText?: string;
+  className?: string;
+  customPath?: string;
+}) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [storedValue, setStoredValue] = useLocalStorage<string>(
@@ -68,7 +76,7 @@ export function LibrarySelect() {
     const fullUrl = buildRedirectUrl({
       originalPath,
       libraryDomain: selectedLibrary.domain,
-      // customPath: selectedLibrary.customPath,
+      customPath: customPath || selectedLibrary.customPath,
     });
 
     return (window.location.href = fullUrl);
@@ -77,7 +85,12 @@ export function LibrarySelect() {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverAnchor asChild>
-        <div className="max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2">
+        <div
+          className={cn(
+            `max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2`,
+            className,
+          )}
+        >
           <HoverCard>
             <HoverCardTrigger>
               <PopoverTrigger asChild>
@@ -95,13 +108,13 @@ export function LibrarySelect() {
                 </Button>
               </PopoverTrigger>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <Typography variant={"p"} as={"p"}>
-                Hvis din skole er tilmeldt GO med UNI-login, skal du vælge
-                skolens kommune. Hvis du vil bruge almindeligt bibliotekslogin,
-                skal du vælge den kommune, du bor i.
-              </Typography>
-            </HoverCardContent>
+            {hoverHelpText && (
+              <HoverCardContent className="w-80">
+                <Typography variant={"p"} as={"p"}>
+                  {hoverHelpText}
+                </Typography>
+              </HoverCardContent>
+            )}
           </HoverCard>
           <Button
             className="shadow-button focus-visible hover:shadow-button-hover border-foreground text-foreground pointer-events-auto inline-flex h-full w-[100px] items-center justify-center rounded-full border px-3 whitespace-nowrap uppercase transition hover:translate-x-[1px] hover:translate-y-[1px] hover:cursor-pointer active:translate-x-[4px] active:translate-y-[4px] active:shadow-none disabled:pointer-events-none disabled:opacity-50"
