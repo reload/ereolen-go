@@ -23,18 +23,10 @@ import {
   HoverCardTrigger,
   HoverCardContent,
 } from "@/components/ui/hover-card";
-import { libraries } from "@/data/libraries";
+import { libraries, Library } from "@/data/libraries";
 import useLocalStorage from "@/hooks/useSelectedLibrary";
 import { buildRedirectUrl, cn } from "@/lib/utils";
 import { Typography } from "./typography";
-
-type Library = {
-  value: string;
-  label: string;
-  domain: string;
-  secondaryDomains: string[];
-  customPath?: string;
-};
 
 export function LibrarySelect({
   hoverHelpText,
