@@ -10,8 +10,8 @@ export default function KampagnerPage() {
           Du er der næsten
         </Typography>
         <p className="md:text-center">
-          Find dit bibliotek herunder for at blive omdirigeret til dit lokale
-          GO-site.
+          Find din kommune herunder for at blive omdirigeret til dit lokale
+          GO-site
         </p>
         <div className="mt-6 flex w-full flex-col justify-center space-y-4 md:mt-16">
           <Typography
