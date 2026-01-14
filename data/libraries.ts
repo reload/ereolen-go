@@ -1,4 +1,12 @@
-export const libraries = [
+export type Library = {
+  value: string;
+  label: string;
+  domain: string;
+  secondaryDomains: string[];
+  customPath?: string;
+};
+
+export const libraries: Library[] = [
   {
     value: "aabenraa",
     label: "Aabenraa",
