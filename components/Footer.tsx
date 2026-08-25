@@ -1,4 +1,4 @@
-import { contactFormLink, footerLinks } from "@/content/links";
+import { footerLinks } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
@@ -7,23 +7,18 @@ import { Link } from "@/components/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-secondary p-4 py-8">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
+    <footer className="bg-bg-primary px-4 py-10 md:py-12">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
         <section aria-labelledby="nyttig-information">
-          <Typo
-            as="h3"
-            variant="h4"
-            className="mb-4 text-xl"
-            id="nyttig-information"
-          >
+          <Typo as="h3" variant="h4" className="mb-4" id="nyttig-information">
             Nyttig information
           </Typo>
 
           <nav>
-            <ul className="space-y-1">
-              {footerLinks.map((link, index) => (
-                <li key={index}>
-                  <Link target="_blank" href={link.href}>
+            <ul className="space-y-1" aria-label="Liste af nyttige links">
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link target="_blank" href={link.href} className="underline">
                     {link.label}
                   </Link>
                 </li>
@@ -33,46 +28,28 @@ const Footer = () => {
         </section>
 
         <section aria-labelledby="kontakt-supporten">
-          <Typo
-            as="h3"
-            variant="h4"
-            className="mb-4 text-xl"
-            id="kontakt-supporten"
-          >
+          <Typo as="h3" variant="h4" className="mb-4" id="kontakt-supporten">
             Kontakt supporten
           </Typo>
-          <Typo as="p" variant="small" className="mb-2">
-            Alle hverdage kl. 13.00-17.00 <br />
-            Fredag kl. 11.00-15.00
+          <Typo as="p" variant="small" className="mb-1">
+            Alle hverdage kl. 14.00-18.00
           </Typo>
-          <Link className="mb-2 block" href="tel:70263636">
+          <Link className="underline" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
-          <Typo as="p" variant="small" className="mb-2">
-            Eller skriv til os uden for vores åbningstid{" "}
-            <Link href={contactFormLink} className="underline">
-              her
-            </Link>
-            .
-          </Typo>
         </section>
 
-        <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
+        <div className="flex flex-col items-start gap-4 md:items-end">
           <Image
-            className="mx-auto"
             src={addBasePath("/ddf_logo.png")}
-            alt="Logo"
-            width={300}
-            height={200}
+            alt="Det Digitale Folkebiblioteks logo"
+            width={280}
+            height={70}
+            className="h-auto w-full max-w-[240px]"
           />
-          <div className="text-center">
-            <Typo as="p" variant="small" className="">
-              eReolen GO er en del af Det Digitale Folkebibliotek
-            </Typo>
-            <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
-              Læs mere på detdigitalefolkebibliotek.dk
-            </Link>
-          </div>
+          <Typo as="p" variant="small" className="md:text-right">
+            Biblo GO! er en del af Det Digitale Folkebibliotek
+          </Typo>
         </div>
       </div>
     </footer>

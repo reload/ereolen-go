@@ -17,7 +17,7 @@ type CardWrapperProps = {
 
 const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
   const base =
-    "flex items-center rounded-xl p-6 shadow-lg text-white justify-center";
+    "flex items-center rounded-2xl p-3 md:p-4 justify-center text-card-primary-foreground";
   const classes = twMerge(base, className);
 
   if (href) {
@@ -39,33 +39,31 @@ const SupportDownloadCards = () => {
     <section className="mx-auto grid w-full max-w-2xl gap-5 xs:grid-cols-2 md:gap-6">
       <CardWrapper
         href={helpANdSupportLink}
-        className="bg-card-primary text-card-primary-foreground grid aspect-square grid-rows-[1fr_auto] justify-items-center hover:no-underline"
+        className="bg-card-primary grid aspect-square grid-rows-[1fr_auto] md:grid-rows-[1fr_30px] justify-items-center gap-2 md:gap-4 hover:no-underline h-full"
       >
         <Image
-          src={addBasePath("/eReolenGoQuestionMark_trim.png")}
-          alt="Support Icon"
-          width={150}
-          height={150}
+          src={addBasePath("/GO-chat-bubble.png")}
+          alt=""
+          width={320}
+          height={245}
+          className="h-auto w-[78%] max-w-[320px] object-contain self-center md:self-end"
         />
-        <Typo as="p" variant="caption">
+        <Typo as="p" variant="caption" className="mb-2 self-start md:mb-0">
           Hjælp og support
         </Typo>
       </CardWrapper>
 
-      {/* Download App */}
       <CardWrapper
         href={downloadLink}
-        className="bg-card-secondary text-card-secondary-foreground grid aspect-square grid-rows-[1fr_auto] justify-items-center hover:no-underline"
+        className="bg-card-secondary grid aspect-square place-items-center hover:no-underline h-full"
       >
         <Image
-          src={addBasePath("/eReolenGoApp_trim.png")}
-          alt="Download App Icon"
-          width={150}
-          height={150}
+          src={addBasePath("/GO-download-app.png")}
+          alt="Download appen"
+          width={250}
+          height={333}
+          className="h-auto w-[86%] max-w-[78%] md:max-w-[260px] object-contain"
         />
-        <Typo as="p" variant="caption">
-          Download GO-appen
-        </Typo>
       </CardWrapper>
     </section>
   );

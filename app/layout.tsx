@@ -51,12 +51,10 @@ export default function RootLayout({
         <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" async
     data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
       </head>
-      <body
-        className={`${GTFlexa.variable} flex min-h-screen flex-col antialiased`}
-      >
+      <body className="bg-bg-primary flex min-h-screen flex-col antialiased">
         <Header />
-        <main className="bg-bg-primary flex flex-1 px-4">
-          <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 pb-12 md:py-12 md:pb-16">
+        <main className="flex flex-1 px-4">
+          <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col pt-8 md:pt-[8vh] pb-12 md:pb-16">
             {children}
           </div>
         </main>

@@ -1,11 +1,11 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 @import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-white: #ffffff;
   --font-sans: var(--font-dm-sans);
   --font-mono: ui-monospace, SFMono-Regular, monospace;
   --color-ring: var(--ring);
@@ -34,36 +34,26 @@
   --text-typo-heading-1: var(--typo-heading-1-size);
   --text-typo-heading-1--line-height: var(--typo-heading-1-line-height);
   --text-typo-heading-1--font-weight: var(--typo-heading-1-weight);
-  --text-typo-heading-1--letter-spacing: var(--typo-heading-1-letter-spacing);
   --text-typo-heading-2: var(--typo-heading-2-size);
   --text-typo-heading-2--line-height: var(--typo-heading-2-line-height);
   --text-typo-heading-2--font-weight: var(--typo-heading-2-weight);
-  --text-typo-heading-2--letter-spacing: var(--typo-heading-2-letter-spacing);
   --text-typo-heading-3: var(--typo-heading-3-size);
   --text-typo-heading-3--line-height: var(--typo-heading-3-line-height);
   --text-typo-heading-3--font-weight: var(--typo-heading-3-weight);
-  --text-typo-heading-3--letter-spacing: var(--typo-heading-3-letter-spacing);
   --text-typo-heading-4: var(--typo-heading-4-size);
   --text-typo-heading-4--line-height: var(--typo-heading-4-line-height);
   --text-typo-heading-4--font-weight: var(--typo-heading-4-weight);
-  --text-typo-heading-4--letter-spacing: var(--typo-heading-4-letter-spacing);
   --text-typo-body-lg: var(--typo-body-lg-size);
   --text-typo-body-lg--line-height: var(--typo-body-lg-line-height);
   --text-typo-body-lg--font-weight: var(--typo-body-lg-weight);
-  --text-typo-body-lg--letter-spacing: var(--typo-body-lg-letter-spacing);
-  --text-typo-body-md: var(--typo-body-md-size);
-  --text-typo-body-md--line-height: var(--typo-body-md-line-height);
-  --text-typo-body-md--font-weight: var(--typo-body-md-weight);
-  --text-typo-body-md--letter-spacing: var(--typo-body-md-letter-spacing);
   --text-typo-body-sm: var(--typo-body-sm-size);
   --text-typo-body-sm--line-height: var(--typo-body-sm-line-height);
   --text-typo-body-sm--font-weight: var(--typo-body-sm-weight);
-  --text-typo-body-sm--letter-spacing: var(--typo-body-sm-letter-spacing);
 
   --color-bg-primary: var(--bg-primary);
-  --color-bg-primary-foreground: var(--bg-primary-foreground);
-  --color-bg-secondary: var(--bg-secondary);
-  --color-bg-secondary-foreground: var(--bg-secondary-foreground);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-dark: var(--brand-dark);
   --color-card-primary: var(--card-primary);
   --color-card-primary-foreground: var(--card-primary-foreground);
   --color-card-secondary: var(--card-secondary);
@@ -71,41 +61,27 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --radius: 0.75rem;
+  --background: #ffffff;
+  --foreground: #0b2718;
+  --card: #ffffff;
+  --card-foreground: #0b2718;
+  --popover: #ffffff;
+  --popover-foreground: #0b2718;
+  --primary: #0b2718;
+  --primary-foreground: #f0f1e9;
+  --secondary: #f0f1e9;
+  --secondary-foreground: #0b2718;
+  --muted: #f0f1e9;
+  --muted-foreground: #5c665f;
+  --accent: #c3ffbb;
+  --accent-foreground: #0b2718;
+  --destructive: #b42318;
+  --border: #c7c8c3;
+  --input: #c7c8c3;
+  --ring: #0b2718;
 
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-
-  --select-width: 42rem;
+  --select-width: 32rem;
 
   --typo-heading-1-size: 30px;
   --typo-heading-1-weight: 600;
@@ -132,49 +108,15 @@
   --typo-body-sm-line-height: 20px;
 
   --bg-primary: #fcfaf8;
-  --bg-primary-foreground: #ffffff;
-  --bg-secondary: #f6f2ef;
-  --bg-secondary-foreground: #ffffff;
-  --card-primary: #bee6fa;
-  --card-primary-foreground: #195a7d;
-  --card-secondary: #ffd2f0;
-  --card-secondary-foreground: #642850;
-  --shadow-button: 2px 2px 0 0px var(--foreground);
-  --shadow-button-hover: 1px 1px 0 0px var(--foreground);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --brand: #66ff55;
+  --brand-soft: #c3ffbb;
+  --brand-dark: #0b2718;
+  --card-primary: var(--brand-soft);
+  --card-primary-foreground: var(--brand-dark);
+  --card-secondary: var(--brand);
+  --card-secondary-foreground: var(--brand-dark);
+  --shadow-button: 2px 2px 0 0 var(--foreground);
+  --shadow-button-hover: 1px 1px 0 0 var(--foreground);
 }
 
 @media (width >= 768px) {
@@ -204,13 +146,22 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-bg-primary text-foreground;
   }
 }
 
 @layer utilities {
-  .w-select {
-    width: var(--select-width);
+  .btn-white {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    background-image: none;
+  }
+  .btn-white:hover,
+  .btn-white:focus,
+  .btn-white:active {
+    background-color: #ffffff;
+    background-image: none;
   }
   .max-w-select {
     max-width: var(--select-width);
