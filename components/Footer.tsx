@@ -8,7 +8,7 @@ import { Link } from "@/components/link";
 const Footer = () => {
   return (
     <footer className="bg-bg-primary px-4 py-10 md:py-12">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-[1fr_1fr_2fr] lg:grid-cols-[1fr_2fr_2fr] md:gap-8">
         <section aria-labelledby="nyttig-information">
           <Typo as="h3" variant="h4" className="mb-4" id="nyttig-information">
             Nyttig information
@@ -39,15 +39,15 @@ const Footer = () => {
           </Link>
         </section>
 
-        <div className="flex flex-col items-start gap-4 md:items-end">
+        <div className="flex flex-col items-center">
           <Image
             src={addBasePath("/ddf_logo.png")}
             alt="Det Digitale Folkebiblioteks logo"
-            width={280}
-            height={70}
-            className="h-auto w-full max-w-[240px]"
+            width={320}
+            height={80}
+            className="h-auto w-full max-w-[300px]"
           />
-          <Typo as="p" variant="small" className="md:text-right">
+          <Typo as="p" variant="small" className="text-center">
             Biblo GO! er en del af Det Digitale Folkebibliotek
           </Typo>
         </div>

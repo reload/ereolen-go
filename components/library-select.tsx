@@ -105,7 +105,7 @@ export function LibrarySelect({
                     </span>
                     <span
                       aria-hidden="true"
-                      className="ml-2 flex h-8 shrink-0 items-center border-l border-input pl-2 sm:ml-3 sm:pl-3 absolute right-[15px] top-0 h-[45px] md:h-[55px] bg-white"
+                      className="ml-2 flex h-8 shrink-0 items-center border-l border-input pl-2 sm:ml-3 sm:pl-3 absolute right-[15px] top-0 h-[45px] md:h-[54px] bg-white"
                     >
                       <ChevronDown className="size-5 opacity-50" />
                     </span>
