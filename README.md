@@ -38,5 +38,3 @@ Sitet bliver automatisk bygget og deployet til **GitHub Pages** via en GitHub Ac
 
 🔗 [Se deployment-workflowet her](.github/workflows/deploy.yml)
 📘 [Workflowet er taget fra dette repo](https://github.com/nextjs/deploy-github-pages)
-
-I august 2026 blev de to sites redesignet for at passe med de nye brand-ændringer.
