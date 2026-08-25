@@ -15,20 +15,20 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ereolengo.dk"),
-  title: "GO",
+  title: "Biblo GO!",
   description:
-    "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
   openGraph: {
-    title: "GO",
+    title: "Biblo GO!",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+      "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
     images: ["/ereolen_logo_some_go.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GO",
+    title: "Biblo GO!",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+      "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
     images: ["/ereolen_logo_some_go.jpg"],
   },
 };
