@@ -36,8 +36,7 @@ const SupportDownloadCards = () => {
   const downloadLink = getDownloadLink(deviceInfo);
 
   return (
-    <section className="mx-auto grid w-full max-w-lg gap-6 md:grid-cols-2">
-      {/* Help and Support */}
+    <section className="mx-auto grid w-full max-w-2xl gap-5 xs:grid-cols-2 md:gap-6">
       <CardWrapper
         href={helpANdSupportLink}
         className="bg-card-primary text-card-primary-foreground grid aspect-square grid-rows-[1fr_auto] justify-items-center hover:no-underline"

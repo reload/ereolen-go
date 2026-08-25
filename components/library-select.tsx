@@ -79,7 +79,7 @@ export function LibrarySelect({
       <PopoverAnchor asChild>
         <div
           className={cn(
-            `max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2`,
+            "max-w-select grid w-full min-w-0 grid-cols-1 justify-items-stretch gap-3 xs:grid-cols-[minmax(0,1fr)_auto] xs:items-stretch",
             className,
           )}
         >
