@@ -6,21 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -42,9 +29,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* GO specific */
-  --font-headline: var(--font-headline);
-  --font-body: var(--font-body);
+  --font-headline: var(--font-dm-sans);
+  --font-body: var(--font-dm-sans);
   --text-typo-heading-1: var(--typo-heading-1-size);
   --text-typo-heading-1--line-height: var(--typo-heading-1-line-height);
   --text-typo-heading-1--font-weight: var(--typo-heading-1-weight);
@@ -121,45 +107,29 @@
 
   --select-width: 42rem;
 
-  /* GO specific */
+  --typo-heading-1-size: 30px;
+  --typo-heading-1-weight: 600;
+  --typo-heading-1-line-height: 36px;
 
-  --font-body: helvetica, sans-serif;
+  --typo-heading-2-size: 24px;
+  --typo-heading-2-weight: 600;
+  --typo-heading-2-line-height: 28px;
 
-  /* FONTS MOBILE */
-  --typo-heading-1-size: 24px;
-  --typo-heading-1-weight: 500;
-  --typo-heading-1-line-height: 28px;
-  --typo-heading-1-letter-spacing: 0;
-
-  --typo-heading-2-size: 22px;
-  --typo-heading-2-weight: 500;
-  --typo-heading-2-line-height: 26px;
-  --typo-heading-2-letter-spacing: 0;
-
-  --typo-heading-3-size: 20px;
-  --typo-heading-3-weight: 500;
+  --typo-heading-3-size: 18px;
+  --typo-heading-3-weight: 600;
   --typo-heading-3-line-height: 24px;
-  --typo-heading-3-letter-spacing: 0;
 
-  --typo-heading-4-size: 18px;
-  --typo-heading-4-weight: 500;
+  --typo-heading-4-size: 16px;
+  --typo-heading-4-weight: 600;
   --typo-heading-4-line-height: 22px;
-  --typo-heading-4-letter-spacing: 0;
 
   --typo-body-lg-size: 16px;
-  --typo-body-lg-weight: 300;
-  --typo-body-lg-line-height: 22px;
-  --typo-body-lg-letter-spacing: 0.01em;
+  --typo-body-lg-weight: 400;
+  --typo-body-lg-line-height: 24px;
 
-  --typo-body-md-size: 14px;
-  --typo-body-md-weight: 300;
-  --typo-body-md-line-height: 18px;
-  --typo-body-md-letter-spacing: 0.01em;
-
-  --typo-body-sm-size: 12px;
-  --typo-body-sm-weight: 300;
-  --typo-body-sm-line-height: 16px;
-  --typo-body-sm-letter-spacing: 0.01em;
+  --typo-body-sm-size: 14px;
+  --typo-body-sm-weight: 400;
+  --typo-body-sm-line-height: 20px;
 
   --bg-primary: #fcfaf8;
   --bg-primary-foreground: #ffffff;
@@ -207,43 +177,25 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* GO specific */
-@media (width >= 1024px) {
+@media (width >= 768px) {
   :root {
-    --typo-heading-1-size: 52px;
-    --typo-heading-1-weight: 500;
-    --typo-heading-1-line-height: 58px;
-    --typo-heading-1-letter-spacing: 0;
+    --typo-heading-1-size: 42px;
+    --typo-heading-1-line-height: 48px;
 
-    --typo-heading-2-size: 42px;
-    --typo-heading-2-weight: 500;
-    --typo-heading-2-line-height: 46px;
-    --typo-heading-2-letter-spacing: 0;
+    --typo-heading-2-size: 32px;
+    --typo-heading-2-line-height: 38px;
 
-    --typo-heading-3-size: 32px;
-    --typo-heading-3-weight: 500;
-    --typo-heading-3-line-height: 36px;
-    --typo-heading-3-letter-spacing: 0;
+    --typo-heading-3-size: 20px;
+    --typo-heading-3-line-height: 26px;
 
-    --typo-heading-4-size: 24px;
-    --typo-heading-4-weight: 500;
-    --typo-heading-4-line-height: 27px;
-    --typo-heading-4-letter-spacing: 0;
+    --typo-heading-4-size: 18px;
+    --typo-heading-4-line-height: 24px;
 
     --typo-body-lg-size: 18px;
-    --typo-body-lg-weight: 300;
     --typo-body-lg-line-height: 26px;
-    --typo-body-lg-letter-spacing: 0.01em;
 
-    --typo-body-md-size: 16px;
-    --typo-body-md-weight: 300;
-    --typo-body-md-line-height: 22px;
-    --typo-body-md-letter-spacing: 0.01em;
-
-    --typo-body-sm-size: 14px;
-    --typo-body-sm-weight: 300;
-    --typo-body-sm-line-height: 18px;
-    --typo-body-sm-letter-spacing: 0.01em;
+    --typo-body-sm-size: 16px;
+    --typo-body-sm-line-height: 22px;
   }
 }
 
@@ -268,12 +220,9 @@
     max-height: var(--radix-popover-content-available-height);
   }
 
-  /* GO specific */
   .shadow-button {
-    font-family: var(--font-headline);
     font-weight: 500;
     font-size: 16px;
-    letter-spacing: 0.04em;
     box-shadow: var(--shadow-button);
   }
   .shadow-button-hover {
@@ -283,70 +232,52 @@
   .text-typo-heading-1,
   .text-typo-heading-2,
   .text-typo-heading-3,
-  .text-typo-heading-4 {
-    font-family: var(--font-headline);
+  .text-typo-heading-4,
+  .text-typo-body-lg,
+  .text-typo-body-sm,
+  .text-typo-caption {
+    font-family: var(--font-dm-sans), sans-serif;
   }
 
   .text-typo-heading-1 {
     font-size: var(--typo-heading-1-size);
     font-weight: var(--typo-heading-1-weight);
     line-height: var(--typo-heading-1-line-height);
-    letter-spacing: var(--typo-heading-1-letter-spacing);
   }
 
   .text-typo-heading-2 {
     font-size: var(--typo-heading-2-size);
     font-weight: var(--typo-heading-2-weight);
     line-height: var(--typo-heading-2-line-height);
-    letter-spacing: var(--typo-heading-2-letter-spacing);
   }
 
   .text-typo-heading-3 {
     font-size: var(--typo-heading-3-size);
     font-weight: var(--typo-heading-3-weight);
     line-height: var(--typo-heading-3-line-height);
-    letter-spacing: var(--typo-heading-3-letter-spacing);
   }
 
   .text-typo-heading-4 {
     font-size: var(--typo-heading-4-size);
     font-weight: var(--typo-heading-4-weight);
     line-height: var(--typo-heading-4-line-height);
-    letter-spacing: var(--typo-heading-4-letter-spacing);
-  }
-
-  .text-typo-body-lg,
-  .text-typo-body-md,
-  .text-typo-body-sm {
-    font-family: var(--font-body);
   }
 
   .text-typo-body-lg {
     font-size: var(--typo-body-lg-size);
     font-weight: var(--typo-body-lg-weight);
     line-height: var(--typo-body-lg-line-height);
-    letter-spacing: var(--typo-body-lg-letter-spacing);
-  }
-
-  .text-typo-body-md {
-    font-size: var(--typo-body-md-size);
-    font-weight: var(--typo-body-md-weight);
-    line-height: var(--typo-body-md-line-height);
-    letter-spacing: var(--typo-body-md-letter-spacing);
   }
 
   .text-typo-body-sm {
     font-size: var(--typo-body-sm-size);
     font-weight: var(--typo-body-sm-weight);
     line-height: var(--typo-body-sm-line-height);
-    letter-spacing: var(--typo-body-sm-letter-spacing);
   }
 
   .text-typo-caption {
-    font-family: var(--font-headline);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
   }
 }
