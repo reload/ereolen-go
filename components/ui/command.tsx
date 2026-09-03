@@ -21,8 +21,7 @@ function Command({
 }: React.ComponentProps<typeof CommandPrimitive>) {
   // cmdk only fills its visually hidden <label> from the `label` prop.
   // aria-label on the root does not name the inner combobox.
-  const accessibleLabel =
-    label ?? (typeof ariaLabel === "string" ? ariaLabel : undefined);
+  const accessibleLabel = label ?? ariaLabel;
 
   return (
     <CommandPrimitive
