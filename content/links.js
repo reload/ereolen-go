@@ -25,9 +25,10 @@ export const helpANdSupportLink =
 
   export const downloadAppLink = "https://biblo.dk";
 
-//use these links if you want to detect the device and send the user to the correct app store/play store
-/* export const downloadAppLinks = {
+//Is not used for now. Use these links if you want to detect the device and send 
+//the user to the correct app store/play store
+export const downloadAppLinks = {
   android:
     "https://play.google.com/store/apps/details?id=io.gonative.android.wlqm.staging&hl=da",
   ios: "https://apps.apple.com/dk/app/ereolen-go/id1149963343?l=da",
-}; */
+};

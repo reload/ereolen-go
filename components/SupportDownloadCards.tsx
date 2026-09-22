@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Link } from "@/components/link";
 import Image from "next/image";
 import { addBasePath } from "@/lib/basePath";
-import { useDeviceDetection } from "@/hooks/useDeviceDetection";
+//import { useDeviceDetection } from "@/hooks/useDeviceDetection";
 //import { getDownloadLink } from "@/lib/getDownloadLink";
 import { downloadAppLink } from "@/content/links";
 
@@ -34,9 +34,9 @@ const CardWrapper = ({ href, target, className = "", children }: CardWrapperProp
 };
 
 const SupportDownloadCards = () => {
-  const deviceInfo = useDeviceDetection();
   const downloadLink = downloadAppLink;
   //Use this if a device detection is ever needed (app stpre/play store)
+  //const deviceInfo = useDeviceDetection();
   //const downloadLink = getDownloadLink(deviceInfo);
 
   return (
