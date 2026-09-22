@@ -1,41 +1,34 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { addBasePath } from "@/lib/basePath";
 import Header from "@/components/Header";
 
-const GTFlexa = localFont({
-  src: [
-    {
-      path: "../fonts/GT-Flexa-Expanded-Regular.woff2",
-      weight: "400",
-    },
-    {
-      path: "../fonts/GT-Flexa-Expanded-Medium.woff2",
-      weight: "500",
-    },
-  ],
-  variable: "--font-headline",
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ereolengo.dk"),
-  title: "GO",
+  title: "Biblo GO!",
   description:
-    "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
   openGraph: {
-    title: "GO",
+    title: "Biblo GO!",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+      "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
     images: ["/ereolen_logo_some_go.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GO",
+    title: "Biblo GO!",
     description:
-      "GO (tidligere eReolen GO) er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+      "eReolen GO hedder nu Biblo GO! Vælg din kommune for at gå til dit lokale GO!-site.",
     images: ["/ereolen_logo_some_go.jpg"],
   },
 };
@@ -46,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="da">
+    <html lang="da" className={`${dmSans.variable} ${dmSans.className}`}>
       <head>
         <script
           data-category-consent="cookie_cat_statistic"
@@ -58,12 +51,10 @@ export default function RootLayout({
         <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" async
     data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
       </head>
-      <body
-        className={`${GTFlexa.variable} flex min-h-screen flex-col antialiased`}
-      >
+      <body className="bg-bg-primary flex min-h-screen flex-col antialiased">
         <Header />
-        <main className="bg-bg-primary flex flex-1 px-4">
-          <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 pb-12 md:py-12 md:pb-16">
+        <main className="flex flex-1 px-4">
+          <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col pt-8 md:pt-[8vh] pb-12 md:pb-16">
             {children}
           </div>
         </main>
