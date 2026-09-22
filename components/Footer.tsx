@@ -8,7 +8,7 @@ import { Link } from "@/components/link";
 const Footer = () => {
   return (
     <footer className="bg-bg-primary px-4 py-10 md:py-12">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-[1fr_1fr_2fr] lg:grid-cols-[1fr_2fr_2fr] md:gap-8">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-[1fr_1fr_2fr] md:gap-8 lg:grid-cols-[1fr_2fr_2fr]">
         <section aria-labelledby="nyttig-information">
           <Typo as="h3" variant="h4" className="mb-4" id="nyttig-information">
             Nyttig information
@@ -32,7 +32,8 @@ const Footer = () => {
             Kontakt supporten
           </Typo>
           <Typo as="p" variant="small" className="mb-1">
-            Alle hverdage kl. 14.00-18.00
+            Alle hverdage kl. 13.00-17.00 <br />
+            Fredag kl. 11.00-15.00
           </Typo>
           <Link className="underline" href="tel:70263636">
             Tlf: 7026 3636

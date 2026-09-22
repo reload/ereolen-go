@@ -7,22 +7,24 @@ import { Link } from "@/components/link";
 import Image from "next/image";
 import { addBasePath } from "@/lib/basePath";
 import { useDeviceDetection } from "@/hooks/useDeviceDetection";
-import { getDownloadLink } from "@/lib/getDownloadLink";
+//import { getDownloadLink } from "@/lib/getDownloadLink";
+import { downloadAppLink } from "@/content/links";
 
 type CardWrapperProps = {
   children: React.ReactNode;
   className?: string;
   href?: string;
+  target?: string;
 };
 
-const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
+const CardWrapper = ({ href, target, className = "", children }: CardWrapperProps) => {
   const base =
     "flex items-center rounded-2xl p-3 md:p-4 justify-center text-card-primary-foreground";
   const classes = twMerge(base, className);
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} target={target} className={classes}>
         {children}
       </Link>
     );
@@ -33,12 +35,15 @@ const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
 
 const SupportDownloadCards = () => {
   const deviceInfo = useDeviceDetection();
-  const downloadLink = getDownloadLink(deviceInfo);
+  const downloadLink = downloadAppLink;
+  //Use this if a device detection is ever needed (app stpre/play store)
+  //const downloadLink = getDownloadLink(deviceInfo);
 
   return (
     <section className="mx-auto grid w-full max-w-2xl gap-5 xs:grid-cols-2 md:gap-6">
       <CardWrapper
         href={helpANdSupportLink}
+        target="_blank"
         className="bg-card-primary grid aspect-square grid-rows-[1fr_auto] md:grid-rows-[1fr_30px] justify-items-center gap-2 md:gap-4 hover:no-underline h-full"
       >
         <Image
@@ -54,7 +59,8 @@ const SupportDownloadCards = () => {
       </CardWrapper>
 
       <CardWrapper
-        href={downloadLink}
+        href={downloadLink} 
+        target="_blank"
         className="bg-card-secondary grid aspect-square place-items-center hover:no-underline h-full"
       >
         <Image

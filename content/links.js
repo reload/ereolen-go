@@ -1,11 +1,11 @@
 export const footerLinks = [
   {
     label: "Info om Biblo GO!",
-    href: "https://www.detdigitalefolkebibliotek.dk/ereolen-go",
+    href: " https://biblo.dk/ombiblogo",
   },
   {
     label: "Kontakt og support",
-    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6",
+    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/210",
   },
   {
     label: "Skoler og Unilogin",
@@ -13,7 +13,7 @@ export const footerLinks = [
   },
   {
     label: "Driftsinformation",
-    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6/topic/d3535950-0d23-4ffe-a41a-e08a6362cc27/article/211255297",
+    href: "https://detdigitalefolkebibliotek.atlassian.net/wiki/external/MGIxNjM4MTUwM2U1NDUzOGI1NjViOTRjM2JkMTgwMzA",
   },
 ];
 
@@ -21,10 +21,13 @@ export const contactFormLink =
   "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
 
 export const helpANdSupportLink =
-  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
+  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/210/create/631";
 
-export const downloadAppLinks = {
+  export const downloadAppLink = "https://biblo.dk";
+
+//use these links if you want to detect the device and send the user to the correct app store/play store
+/* export const downloadAppLinks = {
   android:
     "https://play.google.com/store/apps/details?id=io.gonative.android.wlqm.staging&hl=da",
   ios: "https://apps.apple.com/dk/app/ereolen-go/id1149963343?l=da",
-};
+}; */
