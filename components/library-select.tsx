@@ -1,7 +1,7 @@
 "use client";
 
-import { Check, ChevronsUpDown } from "lucide-react";
-import React, { useState } from "react";
+import { Check, ChevronDown } from "lucide-react";
+import React, { useId, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -39,6 +39,8 @@ export function LibrarySelect({
 }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
+  const listTitleId = useId();
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [storedValue, setStoredValue] = useLocalStorage<string>(
     "selectedLibrary",
     "",
@@ -79,26 +81,37 @@ export function LibrarySelect({
       <PopoverAnchor asChild>
         <div
           className={cn(
-            `max-w-select max-w-select grid w-full grid-cols-[1fr_min-content] gap-2`,
+            "max-w-select grid w-full min-w-0 grid-cols-1 justify-items-stretch gap-3 xs:grid-cols-[minmax(0,1fr)_auto] xs:items-stretch",
             className,
           )}
         >
           <HoverCard>
-            <HoverCardTrigger>
-              <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  role="combobox"
-                  className={`w-full justify-between ${selectedLibrary ? "text-sm" : "text-lg"}`}
-                  aria-expanded={open}
-                  size={"xl"}
-                >
-                  {selectedLibrary
-                    ? selectedLibrary.label
-                    : "Vælg dit bibliotek"}
-                  <ChevronsUpDown className="ml-2 opacity-50" />
-                </Button>
-              </PopoverTrigger>
+            <HoverCardTrigger asChild>
+              <div className="w-full min-w-0">
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="btn-white h-12 min-w-0 w-full justify-between rounded-lg border-input px-3 text-left text-base font-normal shadow-none hover:text-foreground sm:px-4 md:h-14 md:text-lg"
+                    aria-label={
+                      selectedLibrary
+                        ? `Valgt kommune: ${selectedLibrary.label}`
+                        : "Vælg kommune"
+                    }
+                  >
+                    <span className={`min-w-0 truncate ${selectedLibrary ? "text-foreground" : "text-muted-foreground"}`}>
+                      {selectedLibrary
+                        ? selectedLibrary.label
+                        : "Vælg kommune"}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="ml-2 flex h-8 shrink-0 items-center border-l border-input pl-2 sm:ml-3 sm:pl-3 absolute right-[15px] top-0 h-[45px] md:h-[54px] bg-white"
+                    >
+                      <ChevronDown className="size-5 opacity-50" />
+                    </span>
+                  </Button>
+                </PopoverTrigger>
+              </div>
             </HoverCardTrigger>
             {hoverHelpText && (
               <HoverCardContent className="w-80">
@@ -109,12 +122,11 @@ export function LibrarySelect({
             )}
           </HoverCard>
           <Button
-            className="shadow-button focus-visible hover:shadow-button-hover border-foreground text-foreground pointer-events-auto inline-flex h-full w-[100px] items-center justify-center rounded-full border px-3 whitespace-nowrap uppercase transition hover:translate-x-[1px] hover:translate-y-[1px] hover:cursor-pointer active:translate-x-[4px] active:translate-y-[4px] active:shadow-none disabled:pointer-events-none disabled:opacity-50"
+            className="btn-white shadow-button hover:shadow-button-hover border-foreground text-foreground mx-auto inline-flex h-12 w-[88px] shrink-0 items-center justify-center rounded-full border px-4 text-base font-medium whitespace-nowrap transition hover:translate-x-px hover:translate-y-px active:translate-x-0.5 active:translate-y-0.5 active:shadow-none sm:mx-0 md:h-14"
             variant="outline-custom"
-            size={"xl"}
             onClick={handleSubmit}
           >
-            OK
+            Ok
           </Button>
         </div>
       </PopoverAnchor>
@@ -122,15 +134,24 @@ export function LibrarySelect({
         className="popoverContent mt-2 p-0"
         align="start"
         side="bottom"
+        aria-labelledby={listTitleId}
+        onOpenAutoFocus={(event) => {
+          event.preventDefault();
+          searchInputRef.current?.focus();
+        }}
       >
-        <Command className="w-full">
+        <h2 id={listTitleId} className="sr-only">
+          Liste af kommuner
+        </h2>
+        <Command label="Søg efter kommune" className="w-full">
           <CommandInput
-            placeholder="Søg efter dit bibliotek"
+            ref={searchInputRef}
+            placeholder="Søg efter kommune"
             className="h-9 w-full"
             value={input}
             onValueChange={setInput}
           />
-          <CommandList>
+          <CommandList label="Kommuner">
             <CommandEmpty>Ingen resultater</CommandEmpty>
             <CommandGroup>
               {sortedLibraries.map((lib) => (
@@ -141,12 +162,13 @@ export function LibrarySelect({
                   className={cn(
                     "flex items-center justify-between gap-3",
                     storedValue === lib.value
-                      ? "border-secondary bg-accent/20 border-2 border-solid"
+                      ? "bg-brand-soft border-2 border-solid border-foreground data-[selected=true]:bg-brand-soft"
                       : "",
                   )}
                 >
                   {lib.label}
                   <Check
+                    aria-hidden="true"
                     className={cn(
                       "ml-auto",
                       storedValue === lib.value ? "opacity-100" : "opacity-0",

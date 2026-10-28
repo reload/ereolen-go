@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NODE_ENV === "production" ? "/" : "";
+const basePath = "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // Prefix routes and assets for GitHub Pages under /
+  // Site is served from the domain root, so no path prefix is needed
   basePath: basePath,
   assetPrefix: basePath,
   // Ensure static export generates trailing slashes for directories
