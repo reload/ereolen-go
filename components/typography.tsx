@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const typographyVariants = cva("", {
   variants: {
     variant: {
-      display: "text-6xl md:text-7xl leading-tight",
+      display: "text-6xl md:text-7xl font-semibold leading-tight",
       h1: "text-typo-heading-1",
       h2: "text-typo-heading-2",
       h3: "text-typo-heading-3",

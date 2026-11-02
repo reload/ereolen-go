@@ -1,10 +1,10 @@
 # 📚 eReolen Redirector
 
-Dette projekt er bygget for at sikre, at gamle links til Ereolen GO materialer på den tidligere eReolen-platform stadig virker og sender brugeren det rigtige sted hen.
+Dette projekt er bygget for at sikre, at gamle links til Ereolen GO materialer på den tidligere eReolen-platform stadig virker og sender brugeren det rigtige sted hen. Fra november 2026 skiftede eReolen Go navn til Biblo Go.
 
 Den bruges f.eks. til at omskrive links fra `/ting/object/:id` til den "nye" struktur `/work/work-of::id`.
 
-Siden kan ses her [https://reload.github.io/ereolen-go/](https://reload.github.io/ereolen-go/)
+Siden kan ses her [https://reload.github.io/biblogo/](https://reload.github.io/biblogo/)
 
 ---
 
